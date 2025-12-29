@@ -1,26 +1,11 @@
+<p align="center">
+  <img src="./docs/public/logo.png" width="100" alt="Vibe Vibe"/>
+</p>
+
 # Vibe Vibe —— 人人都能学会的 AI 编程（Vibe Coding）指南
 > **面向零编程基础学习者的 AI 辅助编程系统化教程，从「我有一个想法」到「我做出了一个产品」，让人人都能成为 Builder。**
 
-- 点击以访问教程主页：www.vibevibe.cn 
-<!--
-<p align="center">
- <a href='https://mapmyvisitors.com/web/1c0yh'  title='Visit tracker'>
-     <img src='https://mapmyvisitors.com/map.png?cl=080808&w=500&t=tt&d=U-O2EHPRXuWE3LRkAfA07tfWl3EMsjKKCXu6p0EO-Xg&co=ffffff&ct=808080' width="40%" />
- </a>
-</p>
--->
-
-
-<table>
-  <tr>
-    <td width="50%">
-      <img src="https://api.star-history.com/svg?repos=datawhalechina/vibe-vibe&type=Date" alt="Star History Chart" width="100%">
-    </td>
-    <td width="50%">
-      <a href='https://mapmyvisitors.com/web/1c0yh'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=080808&w=500&t=tt&d=U-O2EHPRXuWE3LRkAfA07tfWl3EMsjKKCXu6p0EO-Xg&co=ffffff&ct=808080'/></a>
-    </td>
-  </tr>
-</table>
+点击以访问教程主页：www.vibevibe.cn
 
 ### 核心理念
 
@@ -47,7 +32,7 @@
 | 板块 | 定位 | 适合人群 |
 |-----|------|---------|
 | 📘 **基础篇** | AI 编程入门 + 心法 + 第一个项目 | 完全零基础、用过 ChatGPT 但没做过项目 |
-| 📗 **进阶篇** | 全栈技术栈 + 工程化 + 生产级部署 | 想深入学习、有一定编程基础想转型 |
+| 📗 **进阶篇** | 14章"序言可阅读" · 从0到上线的避坑指南 | 想了解完整项目交付流程的开发者 |
 | 📙 **实践篇** | 分人群项目实战 + 进阶技能训练 | 想通过动手练习巩固所学 |
 | 📕 **优质文章篇** | 精选学习资源 + 行业前沿追踪 | 想持续学习、保持行业敏感度 |
 
@@ -60,19 +45,19 @@
 | 阶段 | 你将获得 |
 |-----|---------|
 | **基础篇** | 掌握 Vibe Coding 心法 · 用自然语言指挥 AI · 独立完成项目 · 部署上线能力 |
-| **进阶篇** | 现代全栈技术栈 · 前后端架构 · 用户系统开发 · 生产级部署 · 工程化思维 |
+| **进阶篇** | 现代全栈技术栈 · 前后端架构 · 用户系统开发 · 生产级部署 · 工程化思维 | 
 
 ## 贡献者名单
 
 
-| 姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 职责 | 简介 |
+| 姓名 | 职责 | 简介 |
 | :----| :---- | :---- |
-| [齐国皓](https://www.guohaoqi.cn) | 项目负责人 & 核心贡献者 | 现就读于新加坡国立大学计算机学院, 湖南大学金融科技协会创始人|
-| [符航康](https://www.hangkangfu.cn) | 项目负责人 & 核心贡献者 | 湖南大学金融科技协会创始成员, 一名 AI 原生的年轻人，湖南大学信息科学与工程学院24级本科生|
+| [符航康](https://www.hangkangfu.cn) | 项目负责人 & 核心贡献者 | 一位 AI 时代的原住民，湖南大学24级本科生|
+| [齐国皓](https://www.guohaoqi.cn) | 联合负责人 & 核心贡献者 | 现就读于新加坡国立大学计算机学院, 湖南大学金融科技协会创始人|
+| 刘磊 | 「文章、实践篇」贡献者、图像贡献者 | 中国科学院大学，一枚在职后端 Coder，热爱 Vibe，崇尚分享。 |
 | 陈俊希 | 「优质文章篇」板块贡献者 | 湖南大学金融科技协会现任会长，湖南大学金融与统计学院24级本科生 |
 | 金龙   |「实践篇」板块贡献者  | 北京大学学生创新学社AI俱乐部副部长，北京大学24级研究生| 
 | 舒璐璐 | 「实践篇」板块贡献者 | 湖南大学「麓山人文+」创始人，湖南大学岳麓书院23级本科生 |
-| 刘磊 | 「优质文章篇」、「实践篇」贡献者 | 中国科学院大学，一枚在职后端 Coder，热爱 Vibe，崇尚分享。 |
 
 ## 目录
 
@@ -136,105 +121,30 @@
 </details>
 
 <details>
-<summary><b>📗 进阶篇：Vibe Coding 全栈实战教程</b></summary>
+<summary><b>📗 进阶篇：从0到上线的避坑指南</b></summary>
+
+本篇以**完整的产品交付流程**为主线，共14章，每章序言均可阅读：
 
 ```
 进阶篇目录
 │
-├── 第0章：Bootcamp（零基础概念打底）
-│   ├── 0.0 课程概念定义：术语表与课程范围
-│   ├── 0.1 计算机与操作系统基础：文件/进程/端口/路径/权限
-│   ├── 0.2 命令行入门：pwd/ls/cd/cat/grep/nano
-│   ├── 0.3 前端三件套：HTML/CSS/JS 基础语法与作用
-│   ├── 0.4 开发环境配置：Node.js、包管理器与工具链
-│   ├── 0.5 JS → TS 思维转换
-│   ├── 0.6 开发安全底线
-│   └── 0.7 Docker 核心概念
-│
-├── 第1章：概念与准备（从思维到工具）
-│   ├── 1.1 工具装配与最小项目验证
-│   ├── 1.2 Vibe Coding 心法
-│   ├── 1.3 最小上线实战与 1Panel 部署
-│   ├── 1.4 AI 协作工作流实战与最佳实践
-│   └── 1.5 工具链与环境
-│
-├── 第2章：技术选型与架构蓝图
-│   ├── 2.0 技术栈全景
-│   ├── 2.1 Next.js + TS + Prisma + OSS 架构全景
-│   ├── 2.2 Next.js 渲染策略全景（CSR/SSR/SSG/ISR）
-│   ├── 2.3 Next.js 核心概念深入
-│   ├── 2.4 前后端协作：接口契约/API Route
-│   ├── 2.5 架构分层详解
-│   └── 2.6 拓展：Supabase 适用与取舍
-│
-├── 第3章：前端到后端（把页面跑起来）
-│   ├── 3.1 App Router：文件路由与数据获取
-│   ├── 3.2 前端构建块：组件/状态/路由/数据获取
-│   ├── 3.3 Figma 集成实战与 AI 协作
-│   ├── 3.4 Tailwind + shadcn/ui：统一设计体系
-│   ├── 3.5 Debug 实战：断点/Network/日志
-│   ├── 3.6 API Route 与服务层分离
-│   ├── 3.7 可用性：错误/空态/加载骨架
-│   └── 3.8 可访问性/UX 原则/i18n
-│
-├── 第4章：数据库与数据生命周期
-│   ├── 4.1 数据建模与 ER 图
-│   ├── 4.2 关系型数据库：CRUD/索引/事务
-│   ├── 4.3 SQL 基础操作
-│   ├── 4.4 Prisma 实战
-│   └── 4.5 数据迁移与版本管理
-│
-├── 第5章：产品文档与沟通规范
-│
-├── 第6章：用户认证与权限
-│   ├── 6.1 NextAuth.js 快速上手
-│   ├── 6.2 认证与授权安全实践
-│   ├── 6.3 API 安全防护实践
-│   ├── 6.4 常见 Web 安全威胁与防护
-│   └── 6.5 第三方登录集成（微信/QQ/钉钉）
-│
-├── 第7章：API 设计与开发规范
-│   ├── 7.1 HTTP 与 API 方法/幂等/重试
-│   ├── 7.2 REST 最小原则与错误返回
-│   ├── 7.3 API 文档：Swagger/Postman
-│   └── 7.4 API 版本管理与兼容性
-│
-├── 第8章：项目规则与协作
-│   ├── 8.1 Git 基本流程
-│   ├── 8.2 分支策略与分支保护
-│   ├── 8.3 提交规范：Conventional Commits
-│   ├── 8.4 .gitignore 管理
-│   └── 8.5 文档与评审流程
-│
-├── 第9章：测试与质量
-│   ├── 9.1 测试金字塔
-│   ├── 9.2 测试环境与隔离
-│   ├── 9.3 单元测试/集成测试：Jest
-│   ├── 9.4 错误处理与日志规范
-│   └── 9.5 CI 质量门禁与 GitHub Actions
-│
-├── 第10章：部署与运维
-│   ├── 10.1 云服务/网络/域名/证书
-│   ├── 10.2 1Panel 可视化部署
-│   ├── 10.3 Docker Compose 编排
-│   ├── 10.4 反向代理与负载均衡
-│   └── 10.5 监控与日志
-│
-├── 第11章：发布、复盘与教学沉淀
-│   ├── 11.1 语义化版本与发布流
-│   ├── 11.2 GitHub Actions 部署
-│   ├── 11.3 课程化产出
-│   └── 11.4 复盘模板
-│
-└── 第12章：高级专题与优化
-    ├── 12.1 Node 进程与事件循环
-    ├── 12.2 SEO：SSR/Meta/站点地图
-    ├── 12.3 Vercel AI SDK 与流式响应
-    ├── 12.4 WebSockets 实时通信
-    ├── 12.5 文件分片传输
-    ├── 12.6 爬虫基础
-    └── 12.7 版本化与变更日志
+├── 第1章：环境搭建、代码形态与包管理器
+├── 第2章：开发工具与 AI 调教
+├── 第3章：PRD 与文档驱动开发
+├── 第4章：代码运行状态与构建原理
+├── 第5章：界面（UI）与交互（UX）
+├── 第6章：环境变量与敏感信息管理
+├── 第7章：数据持久化与数据库
+├── 第8章：功能测试流程与自动化脚本
+├── 第9章：Localhost 与公网访问
+├── 第10章：Git 版本控制与跨平台协作
+├── 第11章：无服务器部署与 CI/CD 自动化
+├── 第12章：域名解析原理与网络接入
+├── 第13章：云服务器运维与项目部署
+└── 第14章：安全防护与 SEO 数据统计
 ```
+
+**技术栈**：Next.js 16 · React · TypeScript · Tailwind CSS · shadcn/ui · Prisma · PostgreSQL
 
 </details>
 
@@ -285,6 +195,10 @@
 <p>扫描下方二维码关注公众号：Datawhale</p>
 <img src="https://raw.githubusercontent.com/datawhalechina/pumpkin-book/master/res/qrcode.jpeg" width = "180" height = "180">
 </div>
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=datawhalechina/vibe-vibe&type=Date)](https://star-history.com/#datawhalechina/vibe-vibe&Date)
 
 ## LICENSE
 

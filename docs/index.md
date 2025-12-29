@@ -2,8 +2,8 @@
 layout: home
 hero:
   name: "Vibe Vibe"
-  text: "人人都能学会的 AI 编程"
-  tagline: "不写代码，也能做产品。从零基础到全栈开发，让 AI 成为你的编程搭档"
+  text: "人人都能学会 AI 编程"
+  tagline: "不写代码，也能做产品\n从零基础到全栈开发，让 AI 成为你的编程搭档"
   image:
     src: /logo.png
     alt: Vibe Coding
@@ -56,62 +56,102 @@ features:
   }
 }
 
-.VPHero .actions .VPButton.brand {
-  background-color: #45523E;
-  border-color: #45523E;
+/* 引导话语样式 */
+.VPHero .tagline::after {
+  content: "点击下方按钮开始你的学习路径";
+  display: block;
+  margin-top: 1rem;
+  color: #6B7280;
+  font-size: 0.95rem;
 }
-.VPHero .actions .VPButton.brand:hover {
-  background-color: #4F5B53;
-  border-color: #4F5B53;
+
+/* 按钮颜色配置 - 针对每个 action 包裹层单独配置 */
+/* 第1个按钮：零基础入门 - 绿色 */
+.VPHero .actions > .action:nth-child(1) .VPButton {
+  background-color: #45523E !important;
+  border-color: #45523E !important;
 }
-.VPHero .actions .VPButton.brand:active {
-  background-color: #3B423C;
-  border-color: #3B423C;
+.VPHero .actions > .action:nth-child(1) .VPButton:hover {
+  background-color: #4F5B53 !important;
+  border-color: #4F5B53 !important;
+}
+
+/* 第2个按钮：有基础进阶 - 橙色 */
+.VPHero .actions > .action:nth-child(2) .VPButton {
+  background-color: #E6A23C !important;
+  border-color: #E6A23C !important;
+  color: white !important;
+}
+.VPHero .actions > .action:nth-child(2) .VPButton:hover {
+  background-color: #F0B050 !important;
+  border-color: #F0B050 !important;
+}
+
+/* 第3个按钮：动手做项目 - 灰色 */
+.VPHero .actions > .action:nth-child(3) .VPButton {
+  background-color: #6B7280 !important;
+  border-color: #6B7280 !important;
+  color: white !important;
+}
+.VPHero .actions > .action:nth-child(3) .VPButton:hover {
+  background-color: #9CA3AF !important;
+  border-color: #9CA3AF !important;
+}
+
+/* 第4个按钮：优质好文章 - 灰色 */
+.VPHero .actions > .action:nth-child(4) .VPButton {
+  background-color: #6B7280 !important;
+  border-color: #6B7280 !important;
+  color: white !important;
+}
+.VPHero .actions > .action:nth-child(4) .VPButton:hover {
+  background-color: #9CA3AF !important;
+  border-color: #9CA3AF !important;
 }
 </style>
 
-## 选择你的学习路径
+## 学习路径
 
 <div class="paths-container" style="display: flex; gap: 2rem; margin: 2rem 0; flex-wrap: wrap;">
 
-<div style="flex: 1; min-width: 300px; padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #667eea11 0%, #764ba211 100%); border: 1px solid #667eea33;">
+<div style="flex: 1; min-width: 300px; padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #45523E11 0%, #45523E22 100%); border: 1px solid #45523E33;">
 
 ### 基础篇：零基础入门
 
+<a href="/Basic/" style="display: inline-block; margin-bottom: 1rem; padding: 0.5rem 1.5rem; background: #45523E; color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">开始阅读基础篇 →</a>
+
 **适合人群**：从未写过代码的小白、文科生、设计师、产品经理
 
-**学习目标**：
-- 理解 Vibe Coding 是什么
-- 学会用 AI 做出你的第一个作品
-- 掌握 MVP 思维和产品感
+**学习目标**：理解 Vibe Coding · 用 AI 做出第一个作品 · 掌握 MVP 思维
 
-**章节预览**：
-| 章节 | 内容 |
-|------|------|
-| 0. 序章 | 自测清单、学习路径规划 |
-| 1. 觉醒 | 从码农到指挥官的思维转变 |
-| 2. 心法 | MVP 思维、不加功能的艺术 |
-| 3. 技法 | 提示词工程、PRD 编写 |
-| 4. 实战 | 从 0 到 1 做出你的作品 |
-| 5. 进阶 | 版本控制、部署、安全意识 |
-| 6. 路径 | 不同背景的学习建议 |
+**内容预览**：
+- **觉醒**：从码农到指挥官的思维转变
+- **心法**：MVP 思维、不加功能的艺术
+- **技法**：提示词工程、PRD 编写
+- **实战**：从 0 到 1 做出你的作品
+- **进阶**：版本控制、部署、安全意识
 
+**技术栈**：HTML/CSS/JS · AI 工具（ChatGPT/Claude/Cursor）· Git · 静态部署
 
 </div>
 
-<div style="flex: 1; min-width: 300px; padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #f093fb11 0%, #f5576c11 100%); border: 1px solid #f093fb33;">
+<div style="flex: 1; min-width: 300px; padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #E6A23C11 0%, #E6A23C22 100%); border: 1px solid #E6A23C33;">
 
-### 进阶篇：全栈实战
+### 进阶篇：从0到上线的避坑指南
 
-**适合人群**：有一定编程基础、想系统学习全栈开发的开发者
+<a href="/Advanced/" style="display: inline-block; margin-bottom: 1rem; padding: 0.5rem 1.5rem; background: #E6A23C; color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">开始阅读进阶篇 →</a>
 
-**学习目标**：
-- 以项目交付全流程为主线：环境 → 文档 → 开发 → 部署上线
-- 第 1-7 章为“序言可阅读”，其余章节持续更新中
-- 旧版进阶（偏知识陈列）仍可阅读：[/Advanced-old/](/Advanced-old/)
+**适合人群**：想了解完整项目交付流程的开发者
 
-持续更新中。
+**学习目标**：全栈技术栈 · 前后端架构 · 生产级部署 · 工程化思维
 
+**内容预览**（14章序言可阅读）：
+- **开发基础**：环境搭建 · 开发工具 · AI 调教 · 文档驱动
+- **界面与数据**：UI/UX · 环境变量 · 数据库 · 测试自动化
+- **部署运维**：公网访问 · Git 协作 · CI/CD · 域名 DNS · VPS 部署
+- **安全增长**：安全防护 · SEO · 数据统计
+
+**技术栈**：Next.js 16 · React · TypeScript · Tailwind · shadcn/ui · Prisma · PostgreSQL
 
 </div>
 
@@ -130,7 +170,7 @@ features:
 - **可视化原理演示** —— 通过动画和交互图解，直观理解前后端交互、请求响应流程
 - **数据库交互沙盒** —— 在浏览器中体验数据库查询、表关系设计，理解数据流转
 - **架构图解互动** —— 点击探索系统架构，理解各层职责和数据走向
-- **概念对比卡片** —— 交互式对比 SSR/CSR、REST/GraphQL 等核心概念
+
 
 让抽象概念变得可触摸，敬请期待！
 :::
@@ -174,45 +214,18 @@ features:
 | 创业者 / 独立开发者 | 两者皆可 | 快速搭建 MVP，独立完成产品 |
 | 想提升效率的开发者 | 基础篇 + 进阶篇 | 系统学习 AI 辅助开发工作流 |
 
-## 技术栈一览
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
-
-<div style="padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #667eea11 0%, #764ba211 100%); border: 1px solid #667eea33;">
-  <h4 style="margin-top: 0; margin-bottom: 1rem; color: #667eea;">基础篇</h4>
-  <ul style="margin: 0; padding-left: 1.5rem;">
-    <li><strong>前端基础</strong>：HTML/CSS/JS</li>
-    <li><strong>AI 工具</strong>：ChatGPT/Claude/Cursor等</li>
-    <li><strong>版本控制</strong>：Git 基础操作</li>
-    <li><strong>部署</strong>：静态网站部署</li>
-  </ul>
-</div>
-
-<div style="padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #f093fb11 0%, #f5576c11 100%); border: 1px solid #f093fb33;">
-  <h4 style="margin-top: 0; margin-bottom: 1rem; color: #f093fb;">进阶篇</h4>
-  <ul style="margin: 0; padding-left: 1.5rem;">
-    <li><strong>框架</strong>：Next.js + TypeScript</li>
-    <li><strong>数据层</strong>：PostgreSQL + Prisma</li>
-    <li><strong>UI 框架</strong>：Tailwind CSS + shadcn/ui</li>
-    <li><strong>认证</strong>：NextAuth.js</li>
-    <li><strong>部署</strong>：Docker + Vercel/Edgeone</li>
-  </ul>
-</div>
-
-</div>
-
 ## 贡献者名单
 
 感谢以下成员为本项目做出的贡献：
 
-| 姓名 | 职务 | 简介 |
-|------|------|------|
-| <a href="http://www.guohaoqi.cn" target="_blank">齐国皓</a> | 项目负责人 & 核心贡献者 | 现就读于新加坡国立大学计算机学院, 湖南大学金融科技协会创始人 |
-| <a href="https://www.hangkangfu.cn/" target="_blank">符航康</a> | 项目负责人 & 核心贡献者 | 湖南大学金融科技协会创始成员, 一名 AI 原生的年轻人，湖南大学信息科学与工程学院24级本科生 |
+| 姓名 | 职责 | 简介 |
+| :----| :---- | :---- |
+| [符航康](https://www.hangkangfu.cn) | 项目负责人 & 核心贡献者 | 一位 AI 时代的原住民，湖南大学24级本科生|
+| [齐国皓](https://www.guohaoqi.cn) | 联合负责人 & 核心贡献者 | 现就读于新加坡国立大学计算机学院, 湖南大学金融科技协会创始人|
+| 刘磊 | 「文章、实践篇」贡献者、图像贡献者 | 中国科学院大学，一枚在职后端 Coder，热爱 Vibe，崇尚分享。 |
 | 陈俊希 | 「优质文章篇」板块贡献者 | 湖南大学金融科技协会现任会长，湖南大学金融与统计学院24级本科生 |
-| 金龙 | 「实践篇」板块贡献者 | 北京大学学生创新学社AI俱乐部副部长，北京大学24级研究生 |
+| 金龙   |「实践篇」板块贡献者  | 北京大学学生创新学社AI俱乐部副部长，北京大学24级研究生| 
 | 舒璐璐 | 「实践篇」板块贡献者 | 湖南大学「麓山人文+」创始人，湖南大学岳麓书院23级本科生 |
-| 刘磊 | 「优质文章篇」、「实践篇」贡献者 | 中国科学院大学，一枚在职后端 Coder，热爱 Vibe，崇尚分享。 |
 
 ## 如何贡献
 

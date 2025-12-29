@@ -584,7 +584,7 @@ export default withMermaid(defineConfig({
 
     footer: {
       message: '',
-      copyright: '<a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2024097797号-3</a>'
+      copyright: '<a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2024097797号-3</a><br/><img src="/gonganbeian.png" style="width:15px;vertical-align:middle;margin:0 4px 0 0"/> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=51170202000484" target="_blank">川公网安备51170202000484号</a>'
     }
   }
 }))
