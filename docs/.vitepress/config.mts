@@ -459,7 +459,6 @@ export default withMermaid(defineConfig({
         text: '进阶篇',
         items: [
           { text: '导览', link: '/Advanced/' },
-          { text: '进阶版（旧）', link: '/Advanced-old/' },
           { text: '第一章：环境搭建', link: '/Advanced/01-environment-setup/' },
           { text: '第二章：开发工具', link: '/Advanced/02-dev-tools-ai-tuning/' },
           { text: '第三章：PRD 与文档', link: '/Advanced/03-prd-doc-driven/' },
@@ -474,6 +473,7 @@ export default withMermaid(defineConfig({
           { text: '第十二章：域名与 DNS', link: '/Advanced/12-domain-dns/' },
           { text: '第十三章：云服务器', link: '/Advanced/13-vps-ops-deploy/' },
           { text: '第十四章：安全与 SEO', link: '/Advanced/14-security-seo-analytics/' },
+          { text: '旧进阶篇（完整）', link: '/Advanced-old/' },
         ]
       },
 
