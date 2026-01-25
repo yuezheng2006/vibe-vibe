@@ -15,7 +15,7 @@ VibeVibe 是基于 **VitePress** 构建的静态网站，完全独立运行，�
 |------|------|------|
 | VitePress | 1.6.4 | 静态网站生成器 |
 | Vue | 3.5.25 | 前端框架 |
-| Node.js | 推荐 18+ | 构建环境 |
+| Node.js | 推荐 24 LTS | 构建环境 |
 
 ## 部署方式
 
@@ -52,7 +52,7 @@ pnpm build
 
 ```dockerfile
 # Dockerfile
-FROM node:18-alpine
+FROM node:24-alpine
 
 WORKDIR /app
 
