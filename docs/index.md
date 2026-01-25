@@ -20,6 +20,9 @@ hero:
     - theme: alt
       text: 优质好文章
       link: /Articles/
+    - theme: alt
+      text: 部署指南
+      link: /deployment/
 
 features:
   - title: 零基础友好
@@ -105,6 +108,17 @@ features:
   color: white !important;
 }
 .VPHero .actions > .action:nth-child(4) .VPButton:hover {
+  background-color: #9CA3AF !important;
+  border-color: #9CA3AF !important;
+}
+
+/* 第5个按钮：部署指南 - 灰色 */
+.VPHero .actions > .action:nth-child(5) .VPButton {
+  background-color: #6B7280 !important;
+  border-color: #6B7280 !important;
+  color: white !important;
+}
+.VPHero .actions > .action:nth-child(5) .VPButton:hover {
   background-color: #9CA3AF !important;
   border-color: #9CA3AF !important;
 }
