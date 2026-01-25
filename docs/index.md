@@ -163,6 +163,12 @@ features:
 VibeVibe 教程已于 **2026 年 1 月 25 日**恢复正式开发，持续更新中。
 :::
 
+::: warning 内部预览版本
+- 当前版本为**内部预览版**，不代表最终品质
+- 章节内容正在持续优化完善中
+- 如发现问题欢迎通过 [GitHub Issues](https://github.com/datawhalechina/vibe-vibe/issues) 反馈
+:::
+
 ::: tip 进阶版预告：在线 IDE + Skills
 我们即将推出**在线开发环境**，无需本地配置环境，打开浏览器即可开始学习：
 
