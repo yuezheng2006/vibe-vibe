@@ -48,13 +48,13 @@ pnpm build
 - **对象存储**：上传到 OSS/S3 并配置静态网站托管
 - **任何静态文件托管服务**
 
-### 方式二：使用 Docker
+### 方式二：使用 Docker（推荐）
 
-如果您的环境使用 Docker，可以使用 Docker 容器部署。
+Docker 方式最简单——容器内已集成 Nginx，一条命令即可启动：
 
 ```dockerfile
 # Dockerfile
-FROM node:24-alpine
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
@@ -75,7 +75,7 @@ RUN pnpm build
 
 # 使用 Nginx 提供静态文件服务
 FROM nginx:alpine
-COPY --from=0 /app/docs/.vitepress/dist /usr/share/nginx/html
+COPY --from=builder /app/docs/.vitepress/dist /usr/share/nginx/html
 EXPOSE 80
 ```
 
@@ -83,9 +83,11 @@ EXPOSE 80
 # 构建镜像
 docker build -t vibevibe-docs .
 
-# 运行容器
+# 运行容器（访问 http://localhost:8080）
 docker run -d -p 8080:80 vibevibe-docs
 ```
+
+**优势**：容器内已集成 Nginx，无需额外配置，一条命令启动服务。
 
 ### 方式三：使用 EdgeOne Pages（腾讯云）
 

@@ -20,9 +20,6 @@ hero:
     - theme: alt
       text: 优质好文章
       link: /Articles/
-    - theme: alt
-      text: 部署指南
-      link: /deployment/
 
 features:
   - title: 零基础友好
@@ -108,17 +105,6 @@ features:
   color: white !important;
 }
 .VPHero .actions > .action:nth-child(4) .VPButton:hover {
-  background-color: #9CA3AF !important;
-  border-color: #9CA3AF !important;
-}
-
-/* 第5个按钮：部署指南 - 灰色 */
-.VPHero .actions > .action:nth-child(5) .VPButton {
-  background-color: #6B7280 !important;
-  border-color: #6B7280 !important;
-  color: white !important;
-}
-.VPHero .actions > .action:nth-child(5) .VPButton:hover {
   background-color: #9CA3AF !important;
   border-color: #9CA3AF !important;
 }
@@ -234,6 +220,8 @@ VibeVibe 教程已于 **2026 年 1 月 25 日**恢复正式开发，持续更新
 
 <!-- 备案期间暂时隐藏贡献者信息 -->
 了解更多项目信息，请前往 [GitHub 仓库](https://github.com/datawhalechina/vibe-vibe)。
+
+需要私有化部署？查看 [部署指南](/deployment/) →
 
 <!-- 
 ## 贡献者名单
