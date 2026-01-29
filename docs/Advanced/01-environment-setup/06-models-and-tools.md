@@ -46,6 +46,7 @@ chapter: "第一章"
 | **CLI 工具** | Claude Code | 命令行运行，无图形界面 |
 | **IDE 工具** | Cursor、Windsurf、Trae | 图形界面，可视化操作 |
 
+
 ::: tip CLI vs IDE 工具，怎么选？
 
 | | CLI 工具 | IDE 工具 |
