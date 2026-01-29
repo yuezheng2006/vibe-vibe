@@ -1,11 +1,11 @@
 ---
-title: "4.7 项目说明书结构"
+title: "4.8 项目说明书结构"
 description: "编写完整的项目 README.md 文档"
 chapter: "第四章"
 priority: "🟢"
 ---
 
-# 4.7 项目说明书结构 🟢
+# 4.8 项目说明书结构 🟢
 
 > **阅读完本节后，你将会收获：**
 > - 理解 README.md 的价值和作用
@@ -371,5 +371,6 @@ README 是项目的"入口"和"概览"，技术文档是详细的实现说明。
 ## 相关内容
 
 - 前置：[4.2 PRD与技术文档的关系](./02-prd-and-tech-docs.md)
-- 前置：[4.7 配置文件格式](./07-config-formats.md)
+- 前置：[4.6 配置文件格式](./06-config-formats.md)
+- 前置：[4.7 API集成实战](./07-api-integration.md)
 - 详见：[第五章 代码运行的三种状态](../05-build-and-runtime-modes/index.md)

@@ -46,13 +46,6 @@ chapter: "第一章"
 | **CLI 工具** | Claude Code | 命令行运行，无图形界面 |
 | **IDE 工具** | Cursor、Windsurf、Trae | 图形界面，可视化操作 |
 
-::: details 🛠️ 点击体验：CLI 与 IDE 工具对比
-<ToolComparison />
-
-> 💡 **练习**：点击卡片查看 CLI 工具和 IDE 工具的优缺点对比。
->
-> 🎯 **核心概念**：CLI 工具轻量灵活，IDE 工具功能丰富，可根据场景选择或组合使用。
-:::
 
 ::: tip CLI vs IDE 工具，怎么选？
 

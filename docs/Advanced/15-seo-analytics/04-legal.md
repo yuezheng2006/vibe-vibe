@@ -318,5 +318,5 @@ graph TD
 
 ## 相关内容
 
-- 前置：[15.7 Umami 统计部署](./07-umami-analytics.md)
+- 前置：[15.3 Umami 统计部署](./03-umami.md)
 - 详见：[第十六章 用户反馈与产品迭代](../16-user-feedback-iteration/index.md)

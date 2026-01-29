@@ -11,13 +11,11 @@ import TerminalSimulator from './components/01-0-TerminalSimulator.vue'
 import FileSystemTree from './components/01-1-FileSystemTree.vue'
 import NetworkPorts from './components/01-1-NetworkPorts.vue'
 import PackageEcosystem from './components/01-1-PackageEcosystem.vue'
-import PackageManagerCompare from './components/01-1-PackageManagerCompare.vue'
 import TypeScriptCompiler from './components/01-1-TypeScriptCompiler.vue'
 import CodeFormatEvolution from './components/01-1-CodeFormatEvolution.vue'
 import TechStackLayers from './components/01-1-TechStackArchitecture.vue'
 import BrowserServerFlow from './components/01-1-BrowserServerFlow.vue'
 import TerminalTroubleshoot from './components/01-1-TerminalTroubleshoot.vue'
-import ToolComparison from './components/01-1-ToolComparison.vue'
 
 // 引入时间线样式
 import "vitepress-markdown-timeline/dist/theme/index.css";
@@ -107,7 +105,6 @@ export default {
     app.component('TerminalPro', TerminalPro)
     app.component('InteractiveDemo', InteractiveDemo)
     app.component('NodeVersionManager', NodeVersionManager)
-    app.component('PackageManagerCompare', PackageManagerCompare)
     app.component('NetworkPorts', NetworkPorts)
     app.component('FileSystemTree', FileSystemTree)
     app.component('PackageEcosystem', PackageEcosystem)
@@ -116,7 +113,6 @@ export default {
     app.component('TechStackLayers', TechStackLayers)
     app.component('BrowserServerFlow', BrowserServerFlow)
     app.component('TerminalTroubleshoot', TerminalTroubleshoot)
-    app.component('ToolComparison', ToolComparison)
   },
   
   // 1. 布局扩展：注入 Giscus 评论

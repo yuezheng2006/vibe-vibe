@@ -324,4 +324,4 @@ SEO 优化完成后，接下来了解 Umami 统计部署。
 ## 相关内容
 
 - 前置：[15.1 Open Graph 与社交分享](./01-opengraph-sharing.md)
-- 详见：[15.3 Umami 统计部署](./03-umami-analytics.md)
+- 详见：[15.3 Umami 统计部署](./03-umami.md)

@@ -305,5 +305,5 @@ OG 优化完成后，接下来了解 SEO 基础配置。
 
 ## 相关内容
 
-- 详见：[15.2 SEO基础配置](./02-seo-basics.md)
+- 详见：[15.2 SEO 全攻略](./02-seo-guide.md)
 - 前置：[第十四章 VPS 运维与部署](../14-vps-ops-deploy/index.md)

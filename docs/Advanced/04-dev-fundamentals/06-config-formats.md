@@ -351,12 +351,13 @@ JSON 标准不支持注释。需要注释可以用 JSONC（JSON with Comments）
 - ✅ JSON 使用括号引号，YAML 使用缩进
 - ✅ 选择格式取决于使用场景
 
-理解了配置格式后，接下来学习如何编写项目说明书。
+理解了配置格式后，接下来学习如何将这些知识应用到实际场景中——集成外部 API。
 
 ---
 
 ## 相关内容
 
 - 前置：[4.2 PRD与技术文档的关系](./02-prd-and-tech-docs.md)
-- 前置：[4.6 API集成实战](./06-api-integration.md)
+- 前置：[4.5 前后端分离概念](./05-frontend-backend-separation.md)
+- 详见：[4.7 API集成实战](./07-api-integration.md)
 - 详见：[4.8 项目说明书结构](./08-readme-structure.md)

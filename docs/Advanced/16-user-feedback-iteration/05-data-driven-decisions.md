@@ -283,5 +283,5 @@ ORDER BY cohort_date DESC;
 ## 相关内容
 
 - 前置：[16.4 用户访谈技巧](./04-user-interviews.md)
-- 前置：[15.7 Umami 统计部署](../15-seo-analytics/07-umami-analytics.md)
+- 前置：[15.3 Umami 统计部署](../15-seo-analytics/03-umami.md)
 - 详见：[16.6 迭代节奏管理](./06-iteration-pace.md)
