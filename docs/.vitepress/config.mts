@@ -31,25 +31,6 @@ function resolveSiteUrl(): string {
 
 const SITE_URL = resolveSiteUrl();
 
-type BroadcastRule = {
-  paths: string[]
-  text?: string
-  color?: string
-}
-
-type BroadcastConfig = {
-  default?: {
-    text: string
-    color: string
-  }
-  rules?: BroadcastRule[]
-  exclude?: string[]
-}
-
-type ThemeConfigWithBroadcast = DefaultTheme.Config & {
-  broadcast?: BroadcastConfig
-}
-
 function urlPathForPage(relativePath: string): string {
   const p = relativePath.replace(/\\/g, '/');
   if (p === 'index.md') return '/';
@@ -173,7 +154,7 @@ function buildBreadcrumbList(urlPath: string, fullUrl: string): Record<string, u
 }
 
 
-export default withMermaid(defineConfigWithTheme<ThemeConfigWithBroadcast>({
+export default withMermaid(defineConfigWithTheme({
   lang: 'zh-CN',
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
@@ -615,18 +596,5 @@ export default withMermaid(defineConfigWithTheme<ThemeConfigWithBroadcast>({
     //   message: '',
     //   copyright: ''
     // },
-
-    // 广播横幅配置
-    broadcast: {
-      // 默认配置（全局生效，除非被 exclude 排除）
-      default: {
-        text: '🚧 抢先预览版，内容建设中，不代表最终品质 🚧',
-        color: '#e6a23c'
-      },
-      // 按路径自定义配置（支持 glob 模式，匹配到的路径会覆盖 default）
-      rules: [],
-      // 排除路径（这些页面不显示横幅）
-      exclude: []
-    }
   }
 }))
