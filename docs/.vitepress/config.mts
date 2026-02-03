@@ -19,6 +19,9 @@ import {
 } from './modules/utils'
 import { buildBreadcrumbList } from './modules/seo'
 import { generateRobotsTxt, buildRssXml, extractRssItem, type RssItem } from './modules/feed'
+import { buildFAQSchema, tutorialFAQs } from './modules/faq'
+import { buildImageSitemap } from './modules/sitemap'
+import { generateAutoDescription, inferDifficulty, generateRelatedPages, getLastUpdatedHint } from './modules/defaults'
 
 // 全局类型声明：支持 Vite 的 import.meta.env
 declare global {
@@ -101,6 +104,23 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: SITE_TITLE, href: '/rss.xml' }],
     ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
 
+    // 语言和作者链接（SEO增强）
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: SITE_URL }],
+    ['link', { rel: 'alternate', hreflang: 'x-default', href: SITE_URL }],
+    ['link', { rel: 'author', href: 'https://github.com/datawhalechina/vibe-vibe/graphs/contributors' }],
+
+    // DNS 预解析 - 提前解析外部域名
+    ['link', { rel: 'dns-prefetch', href: '//u.vibevibe.cn' }],
+    ['link', { rel: 'dns-prefetch', href: '//github.com' }],
+    ['link', { rel: 'dns-prefetch', href: '//www.googletagmanager.com' }],
+
+    // Preconnect - 比 DNS预解析更强，建立 TCP+TLS 连接
+    ['link', { rel: 'preconnect', href: 'https://u.vibevibe.cn' }],
+    ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: 'anonymous' }],
+
+    // Preload 关键资源 - 优先加载重要资源
+    ['link', { rel: 'preload', href: '/logo.png', as: 'image' }],
+
     // 统计脚本
     [
       'script',
@@ -139,6 +159,31 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
                        pageData.relativePath.startsWith('Advanced/') ||
                        pageData.relativePath.startsWith('Practice/'));
 
+    // 自动分类：根据路径生成 section 名称
+    const articleSection = pageData.relativePath.startsWith('Basic/') ? '基础篇' :
+                          pageData.relativePath.startsWith('Advanced/') ? '进阶篇' :
+                          pageData.relativePath.startsWith('Practice/') ? '实践篇' :
+                          pageData.relativePath.startsWith('Articles/') ? '优质文章' : '编程教程';
+
+    // 动态关键词生成
+    const generateKeywords = (path: string, pageTitle: string): string => {
+      const baseKeywords = ['Vibe Coding', 'AI编程', 'Cursor', 'Claude', 'Next.js'];
+
+      if (path.startsWith('Basic/')) {
+        return [...baseKeywords, '零基础', '编程入门', 'AI辅助开发', 'MVP'].join(', ');
+      } else if (path.startsWith('Advanced/')) {
+        return [...baseKeywords, '全栈开发', 'TypeScript', 'React', 'Tailwind CSS', '数据库', '部署'].join(', ');
+      } else if (path.startsWith('Practice/')) {
+        return [...baseKeywords, '项目实战', '全栈项目', 'AI Agent', '实战案例'].join(', ');
+      } else if (path.startsWith('Articles/')) {
+        return ['AI编程', '技术博客', 'OpenAI', 'Anthropic', 'Vercel', '开发资源'].join(', ');
+      }
+
+      return baseKeywords.join(', ');
+    };
+
+    const pageKeywords = generateKeywords(pageData.relativePath, title);
+
     // 增强的结构化数据
     const jsonLdGraph: Array<Record<string, unknown>> = [
       {
@@ -151,8 +196,63 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
         inLanguage: 'zh-CN',
         publisher: {
           '@type': 'Organization',
+          '@id': `${SITE_URL}/#organization`,
           name: 'Datawhale',
-          url: 'https://github.com/datawhalechina'
+          url: 'https://github.com/datawhalechina',
+          logo: {
+            '@type': 'ImageObject',
+            url: `${SITE_URL}/logo.png`,
+            width: 512,
+            height: 512
+          },
+          sameAs: [
+            'https://github.com/datawhalechina',
+            'https://github.com/datawhalechina/vibe-vibe'
+          ]
+        },
+        // 站内搜索框
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: `${SITE_URL}/search?q={search_term_string}`
+          },
+          'query-input': 'required name=search_term_string'
+        }
+      },
+      // 组织详细结构化数据
+      {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}/#organization`,
+        name: 'Datawhale',
+        url: SITE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}/logo.png`
+        },
+        description: '让每个人都能成为 Builder - AI 时代的开源学习社区',
+        sameAs: [
+          'https://github.com/datawhalechina',
+          'https://github.com/datawhalechina/vibe-vibe'
+        ]
+      },
+      // 作者 Profile Schema
+      {
+        '@type': 'Person',
+        '@id': `${SITE_URL}/#author`,
+        name: 'Eyre',
+        url: SITE_URL,
+        description: 'Vibe Vibe 项目发起人 & 核心贡献者',
+        knowsAbout: [
+          'Vibe Coding',
+          'AI Programming',
+          'Next.js',
+          'TypeScript',
+          'Full-stack Development'
+        ],
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Datawhale'
         }
       },
       {
@@ -205,6 +305,16 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
 
     if (breadcrumbList) jsonLdGraph.push(breadcrumbList);
 
+    // 为首页和 FAQ 页面添加 FAQ 结构化数据
+    const isFAQPage = pageData.relativePath.includes('faq') ||
+                       pageData.relativePath.includes('99-appendix') ||
+                       pageData.relativePath === 'index.md';
+
+    if (isFAQPage) {
+      const faqSchema = buildFAQSchema(tutorialFAQs, url, SITE_TITLE);
+      jsonLdGraph.push(faqSchema);
+    }
+
     const jsonLd = {
       '@context': 'https://schema.org',
       '@graph': jsonLdGraph
@@ -228,7 +338,7 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
         ['meta', { property: 'og:type', content: 'article' }],
         ['meta', { property: 'article:published_time', content: new Date().toISOString() }],
         ['meta', { property: 'article:author', content: 'Eyre' }],
-        ['meta', { property: 'article:section', content: '编程教程' }]
+        ['meta', { property: 'article:section', content: articleSection }]
       ] : [
         ['meta', { property: 'og:type', content: 'website' }]
       ]),
@@ -252,6 +362,14 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
       ['meta', { property: 'weibo:webpage:description', content: description }],
       ['meta', { property: 'weibo:webpage:image', content: image }],
 
+      // 动态关键词 - 根据页面内容生成
+      ['meta', { name: 'keywords', content: pageKeywords }],
+
+      // 更新频率提示（仅首页）
+      ...(pageData.relativePath === 'index.md' ? [
+        ['meta', { name: 'revisit-after', content: '7 days' }]
+      ] : [] as HeadConfig[]),
+
       // 结构化数据
       ['script', { type: 'application/ld+json' }, safeJsonLd(jsonLd)],
     ];
@@ -260,27 +378,45 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
   },
 
   transformPageData: async (pageData, ctx) => {
-    // 只在生产构建时执行，避免影响开发服务器性能
-    // VitePress 的 import.meta.env 在构建时可用
+    // Run only in production builds to avoid affecting dev server performance
+    // VitePress import.meta.env is available at build time
     const isDev = import.meta.env?.DEV ?? process.env.NODE_ENV !== 'production';
     if (isDev) return;
 
     const frontmatter = pageData.frontmatter;
-    const frontmatterDescription = typeof frontmatter?.description === 'string' ? frontmatter.description : undefined;
     const relativePath = pageData.relativePath;
     const fullPath = joinPath(ctx.siteConfig.srcDir, relativePath);
 
     try {
       const source = await readFile(fullPath, 'utf-8');
 
-      // 提取或生成描述
-      const description = frontmatterDescription || extractDescriptionFromMarkdown(source);
-      if (!description) return;
+      // 一劳永逸：自动生成 Meta Description（如果没有）
+      let description = typeof frontmatter?.description === 'string' ? frontmatter.description : undefined;
+      if (!description) {
+        description = generateAutoDescription(pageData.title, relativePath, source);
+      }
 
       // 计算阅读时间
       const readingTime = estimateReadingTime(source);
 
-      return { description, readingTime };
+      // 一劳永逸：自动推断难度等级（如果没有）
+      const difficulty = typeof frontmatter?.difficulty === 'string'
+        ? frontmatter.difficulty
+        : inferDifficulty(relativePath);
+
+      // 一劳永逸：自动生成相关页面推荐
+      const relatedPages = generateRelatedPages(relativePath);
+
+      // 一劳永逸：生成更新提示
+      const updatedHint = getLastUpdatedHint(relativePath);
+
+      return {
+        description,
+        readingTime,
+        difficulty,
+        relatedPages,
+        updatedHint
+      };
     } catch (error) {
       // 记录错误但不中断构建
       console.warn(`Failed to process page data for ${relativePath}:`, error);
@@ -290,10 +426,15 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
 
   buildEnd: async (siteConfig) => {
     // 优化 robots.txt
-    const sitemapLine = SITE_URL ? `\nSitemap: ${SITE_URL}/sitemap.xml\n` : '\n';
+    const sitemapLine = SITE_URL ? `\nSitemap: ${SITE_URL}/sitemap.xml\nSitemap: ${SITE_URL}/image-sitemap.xml` : '';
     const robotsContent = `User-agent: *
 Allow: /
-Crawl-delay: 1${sitemapLine}
+Crawl-delay: 1
+
+# AI 助手发现文件
+# 指引 AI 理解项目的黄金文档
+Sitemap: ${SITE_URL}/llms.txt
+${sitemapLine}
 
 # 禁止爬取缓存和临时文件
 Disallow: /cache/
@@ -311,6 +452,11 @@ Allow: /
 
 User-agent: Slurp
 Allow: /
+
+User-agent: *
+Allow: /llms.txt
+Allow: /humans.txt
+Allow: /security.txt
 `;
     await writeFile(joinPath(siteConfig.outDir, 'robots.txt'), robotsContent, 'utf-8');
 
@@ -439,6 +585,9 @@ Allow: /
     ].join('');
 
     await writeFile(joinPath(siteConfig.outDir, 'rss.xml'), rssXml, 'utf-8');
+
+    // 生成图片 sitemap
+    await buildImageSitemap(SITE_URL, joinPath(siteConfig.srcDir, 'public'), siteConfig.outDir);
   },
 
   // 1. Markdown 增强配置
