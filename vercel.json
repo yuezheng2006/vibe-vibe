@@ -1,11 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "docs/.vitepress/dist",
+  "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": null,
-  "git": {
-    "deploymentEnabled": {
-      "main": true
-    }
-  }
+  "outputDirectory": "docs/.vitepress/dist"
 }
