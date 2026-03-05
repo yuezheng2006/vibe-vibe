@@ -1,6 +1,6 @@
 # VIBE VIBE - SECURITY POLICY
 
-Contact: mailto:contact@vibevibe.cn
+Contact: mailto:contact@cyber101.cc
 Preferred-Languages: zh, en
 Expires: 2027-02-03T23:59:00.000Z
 
@@ -10,7 +10,7 @@ Expires: 2027-02-03T23:59:00.000Z
 
 If you discover a security vulnerability, please report it responsibly:
 
-1. **Email**: contact@vibevibe.cn
+1. **Email**: contact@cyber101.cc
 2. **GitHub Security Advisory**: Use GitHub's private vulnerability reporting
 3. **Response Time**: We aim to respond within 48 hours
 
@@ -33,7 +33,7 @@ We commit to:
 ## Scope
 
 This security policy covers:
-- www.vibevibe.cn
+- vibe.cyber101.cc
 - Related subdomains
 - Official GitHub repositories
 

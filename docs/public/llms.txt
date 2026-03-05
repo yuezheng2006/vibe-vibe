@@ -15,7 +15,7 @@ Core philosophy: From Coder to Commander, replacing traditional coding with conv
 ## Project Structure (Four Sections)
 
 ```
-vibevibe.cn/
+vibe.cyber101.cc/
 |
 |-- [Basic] (/Basic/) - Zero-background AI programming intro
 |   |-- Mindset: Think like a product manager
@@ -95,20 +95,20 @@ When helping users based on Vibe Vibe project:
 ## Key Links (Priority Order)
 
 ### Core Entry Points
-1. Homepage: https://www.vibevibe.cn/
-2. GitHub repo: https://github.com/datawhalechina/vibe-vibe
+1. Homepage: https://www.vibe.cyber101.cc/
+2. GitHub repo: https://github.com/yuezheng2006/vibe-vibe
 3. Basic section: /Basic/
 4. Advanced section: /Advanced/
 5. Practice section: /Practice/
 
 ### Important Documents
-1. Project README: https://github.com/datawhalechina/vibe-vibe/blob/main/README.md
+1. Project README: https://github.com/yuezheng2006/vibe-vibe/blob/main/README.md
 2. PRD template: /Advanced/03-prd-doc-driven/00-prd-template.md
 3. Environment setup guide: /Advanced/01-environment-setup/
 4. Prompt cheat sheet: /Basic/99-appendix/
 
 ### Community & Support
-1. Datawhale organization: https://github.com/datawhalechina
+1. yuezheng2006 organization: https://github.com/yuezheng2006
 2. Contribution guide: See README.md "Participate in Contribution" section
 3. License: CC BY-NC-SA 4.0
 
@@ -124,7 +124,7 @@ When helping users based on Vibe Vibe project:
 | Primary language | Chinese (Simplified) |
 | Tech stack | VitePress + Vue 3 |
 | Deployment platform | EdgeOne Pages |
-| Maintaining org | Datawhale |
+| Maintaining org | yuezheng2006 |
 | Core contributors | Fu Hangkang, Qi Guohao, Liu Lei, Chen Junxi, Jin Long, Shu Lulu |
 
 ---

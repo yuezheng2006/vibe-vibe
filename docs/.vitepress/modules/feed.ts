@@ -149,8 +149,8 @@ export function buildRssXml(
   const channelDescription = safeCdata(siteDescription);
   const channelLanguage = 'zh-CN';
   const channelLastBuildDate = escapeXml(lastBuildDate.toUTCString());
-  const channelManagingEditor = 'Eyre (contact@vibevibe.cn)';
-  const channelWebMaster = 'Eyre (contact@vibevibe.cn)';
+  const channelManagingEditor = 'Eyre (contact@cyber101.cc)';
+  const channelWebMaster = 'Eyre (contact@cyber101.cc)';
   const channelCategory = '编程教程';
 
   const rssXml = [
