@@ -76,7 +76,7 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
       description: SITE_DESCRIPTION,
       themeConfig: {
         nav: [
-          { text: '首页', link: '/' },
+          { text: '首页', link: '/zh/' },
           {
             text: '基础篇',
             items: [
@@ -279,8 +279,9 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
     ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
 
     // 语言和作者链接（SEO增强）
-    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: SITE_URL }],
-    ['link', { rel: 'alternate', hreflang: 'x-default', href: SITE_URL }],
+    ['link', { rel: 'alternate', hreflang: 'en-US', href: `${SITE_URL}/en/` }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: `${SITE_URL}/zh/` }],
+    ['link', { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}/en/` }],
     ['link', { rel: 'author', href: 'https://github.com/datawhalechina/vibe-vibe/graphs/contributors' }],
 
     // DNS 预解析 - 提前解析外部域名
@@ -873,7 +874,7 @@ Allow: /security.txt
         hyphenToSpace: true,
         sortMenusByFrontmatterOrder: true,
         frontmatterOrderDefaultValue: 9999,
-        excludeFolders: ['en', 'public', 'assets', '.vitepress', '.claude', 'deployment'],
+          excludeFolders: ['en', 'zh', 'public', 'assets', '.vitepress', '.claude', 'deployment'],
 
         manualSortFileNameByPriority: [
           'Basic', 'Advanced', 'Practice', 'Articles',
@@ -893,7 +894,7 @@ Allow: /security.txt
         ],
 
         collapsed: true,
-        excludePattern: ['public', 'assets', 'docs', 'en'],
+          excludePattern: ['public', 'assets', 'docs', 'en', 'zh'],
       },
       {
         documentRootPath: 'docs',
