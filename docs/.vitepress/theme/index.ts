@@ -221,6 +221,134 @@ const PwaInstallButton = defineComponent({
   }
 })
 
+const SiteLayout = defineComponent({
+  name: 'SiteLayout',
+  setup() {
+    const route = useRoute()
+    const { frontmatter, isDark, site } = useData()
+    const giscusTheme = computed(() => {
+      const builtinTheme = isDark.value ? 'dark_dimmed' : 'light'
+
+      // giscus custom themes require a publicly reachable HTTPS URL.
+      if (typeof window === 'undefined' || window.location.protocol !== 'https:') {
+        return builtinTheme
+      }
+
+      const themeFile = isDark.value ? 'vibevibe-dark.css' : 'vibevibe-light.css'
+      return new URL(`${site.value.base}giscus/${themeFile}`, window.location.origin).toString()
+    })
+    const copy = computed(() =>
+      route.path.startsWith('/en/')
+        ? {
+            homeGuideText: 'Click below to start your AI creation journey',
+            previewLabel: 'Alpha Preview:',
+            previewText:
+              'This is an early internal build. Some chapters are still incomplete and issues may exist. Feedback is very welcome on ',
+            feedbackLabel: 'Feedback & Suggestions:',
+            feedbackText:
+              'Found something inaccurate or want to add more context? Leave a comment below, or open an issue on ',
+            issueLink: 'GitHub',
+            starText: 'Give us a Star:'
+          }
+        : {
+            homeGuideText: '点击下方按钮，开始你的 AI 创造之旅',
+            previewLabel: 'Alpha内测提示：',
+            previewText:
+              '当前为早期内部构建版本，部分章节仍在完善中，也可能存在问题，欢迎到 ',
+            feedbackLabel: '反馈与建议：',
+            feedbackText: '发现内容有误或想补充？欢迎在下方评论区留言，或到 ',
+            issueLink: 'GitHub 提 Issue',
+            starText: '点我给个 Star 吧：'
+          }
+    )
+
+    const isHomeLayout = computed(() => frontmatter.value.layout === 'home')
+
+    const renderPreviewNotice = () =>
+      h('div', { class: 'preview-notice' }, [
+        h('strong', null, copy.value.previewLabel),
+        copy.value.previewText,
+        h(
+          'a',
+          {
+            href: 'https://github.com/datawhalechina/vibe-vibe/issues',
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          },
+          copy.value.issueLink
+        ),
+        '.'
+      ])
+
+    return () =>
+      h(DefaultTheme.Layout, null, {
+        'home-hero-info-after': () =>
+          isHomeLayout.value
+            ? h('p', { class: 'home-guide-text' }, copy.value.homeGuideText)
+            : null,
+        'page-bottom': () =>
+          h('div', { class: 'preview-notice-wrap' }, [renderPreviewNotice()]),
+        'doc-after': () => {
+          if (isHomeLayout.value) return null
+
+          const children: VNode[] = [
+            renderPreviewNotice(),
+            h('div', { class: 'feedback-tip' }, [
+              h('strong', null, copy.value.feedbackLabel),
+              copy.value.feedbackText,
+              h(
+                'a',
+                {
+                  href: 'https://github.com/datawhalechina/vibe-vibe/issues',
+                  target: '_blank',
+                  rel: 'noopener noreferrer'
+                },
+                copy.value.issueLink
+              ),
+              h('div', { class: 'feedback-actions' }, [
+                h('span', { class: 'github-star-text' }, copy.value.starText),
+                h('span', { class: 'github-star-wrap' }, [
+                  h('iframe', {
+                    class: 'github-star-btn',
+                    src: 'https://ghbtns.com/github-btn.html?user=datawhalechina&repo=vibe-vibe&type=star&count=false&size=large',
+                    title: 'GitHub',
+                    height: '30',
+                    width: '120',
+                    scrolling: '0',
+                    frameborder: '0'
+                  })
+                ]),
+                h(PwaInstallButton)
+              ])
+            ])
+          ]
+
+          if (frontmatter.value.comment !== false) {
+            children.push(
+              h(Giscus, {
+                key: `${route.path}::${isDark.value ? 'dark' : 'light'}::${giscusTheme.value}`,
+                repo: "datawhalechina/vibe-vibe",
+                repoId: "R_kgDOQerM_g",
+                category: "General",
+                categoryId: "DIC_kwDOQerM_s4CzzOf",
+                mapping: "pathname",
+                strict: "0",
+                reactionsEnabled: "1",
+                emitMetadata: "1",
+                inputPosition: "bottom",
+                theme: giscusTheme.value,
+                lang: route.path.startsWith('/en/') ? 'en' : 'zh-CN',
+                loading: "lazy"
+              })
+            )
+          }
+
+          return h('div', null, children)
+        }
+      })
+  }
+})
+
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
@@ -353,120 +481,7 @@ export default {
   },
   
   // 1. 布局扩展：注入 Giscus 评论
-  Layout: () => {
-    const route = useRoute()
-    const { frontmatter, isDark } = useData();
-    const copy = computed(() =>
-      route.path.startsWith('/en/')
-        ? {
-            homeGuideText: 'Click below to start your AI creation journey',
-            previewLabel: 'Alpha Preview:',
-            previewText:
-              'This is an early internal build. Some chapters are still incomplete and issues may exist. Feedback is very welcome on ',
-            feedbackLabel: 'Feedback & Suggestions:',
-            feedbackText:
-              'Found something inaccurate or want to add more context? Leave a comment below, or open an issue on ',
-            issueLink: 'GitHub',
-            starText: 'Give us a Star:'
-          }
-        : {
-            homeGuideText: '点击下方按钮，开始你的 AI 创造之旅',
-            previewLabel: 'Alpha内测提示：',
-            previewText:
-              '当前为早期内部构建版本，部分章节仍在完善中，也可能存在问题，欢迎到 ',
-            feedbackLabel: '反馈与建议：',
-            feedbackText: '发现内容有误或想补充？欢迎在下方评论区留言，或到 ',
-            issueLink: 'GitHub 提 Issue',
-            starText: '点我给个 Star 吧：'
-          }
-    )
-
-    const isHomeLayout = computed(() => frontmatter.value.layout === 'home')
-
-    const renderPreviewNotice = () =>
-      h('div', { class: 'preview-notice' }, [
-        h('strong', null, copy.value.previewLabel),
-        copy.value.previewText,
-        h(
-          'a',
-          {
-            href: 'https://github.com/datawhalechina/vibe-vibe/issues',
-            target: '_blank',
-            rel: 'noopener noreferrer'
-          },
-          copy.value.issueLink
-        ),
-        '.'
-      ])
-    
-    return h(DefaultTheme.Layout, null, {
-      'home-hero-info-after': () =>
-        isHomeLayout.value
-          ? h('p', { class: 'home-guide-text' }, copy.value.homeGuideText)
-          : null,
-      'page-bottom': () =>
-        h('div', { class: 'preview-notice-wrap' }, [renderPreviewNotice()]),
-      'doc-after': () => {
-        if (isHomeLayout.value) return null
-
-        const children: VNode[] = [
-          renderPreviewNotice(),
-          h('div', { class: 'feedback-tip' }, [
-            h('strong', null, copy.value.feedbackLabel),
-            copy.value.feedbackText,
-            h(
-              'a',
-              {
-                href: 'https://github.com/datawhalechina/vibe-vibe/issues',
-                target: '_blank',
-                rel: 'noopener noreferrer'
-              },
-              copy.value.issueLink
-            ),
-            h('div', { class: 'feedback-actions' }, [
-              h('span', { class: 'github-star-text' }, copy.value.starText),
-              h('span', { class: 'github-star-wrap' }, [
-                h('iframe', {
-                  class: 'github-star-btn',
-                  src: 'https://ghbtns.com/github-btn.html?user=datawhalechina&repo=vibe-vibe&type=star&count=false&size=large',
-                  title: 'GitHub',
-                  height: '30',
-                  width: '120',
-                  scrolling: '0',
-                  frameborder: '0'
-                })
-              ]),
-              h(PwaInstallButton)
-            ])
-          ])
-        ];
-
-        if (frontmatter.value.comment !== false) {
-          children.push(
-            h('div', { style: { marginTop: '2rem' } }, [
-              h(Giscus, {
-                key: `${route.path}::${isDark.value ? 'dark' : 'light'}`,
-                repo: "datawhalechina/vibe-vibe",
-                repoId: "R_kgDOQerM_g",
-                category: "General",
-                categoryId: "DIC_kwDOQerM_s4CzzOf",
-                mapping: "pathname",
-                strict: "0",
-                reactionsEnabled: "1",
-                emitMetadata: "1",
-                inputPosition: "bottom",
-                theme: isDark.value ? "dark_dimmed" : "light",
-                lang: route.path.startsWith('/en/') ? 'en' : 'zh-CN',
-                loading: "lazy"
-              })
-            ])
-          );
-        }
-
-        return h('div', null, children)
-      }
-    })
-  },
+  Layout: SiteLayout,
 
   // 2. 增强功能：图片放大
   setup() {

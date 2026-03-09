@@ -2,8 +2,8 @@
 layout: home
 hero:
   name: "Vibe Vibe"
-  text: "人人都能开始 AI 创造"
-  tagline: "不止写代码，更把想法做成作品\n从第一个原型到正式上线，用 AI 放大你的创意与执行力"
+  text: "人人都能 AI 创造"
+  tagline: "不止写代码，更能把想法变成作品\n从首个原型到正式上线，放大你的天才创意"
   image:
     src: /logo.png
     alt: Vibe Coding
@@ -150,10 +150,6 @@ features:
 
 ## 项目状态
 
-::: tip 正式恢复开发
-VibeVibe 教程已于 **2026 年 1 月 25 日**恢复正式开发，持续更新中。
-:::
-
 ::: warning 内部预览版本
 - 当前版本为**内部预览版**，不代表最终品质
 - 章节内容正在持续优化完善中
@@ -164,14 +160,14 @@ VibeVibe 教程已于 **2026 年 1 月 25 日**恢复正式开发，持续更新
 想全面了解 Claude Code 有哪些能力？访问 **[cclog.vibevibe.cn](https://cclog.vibevibe.cn)** 查看从 v0.2 到 v2.1 的完整功能梳理，涵盖 220+ 个版本、1000+ 项更新，包括 AI 模型、多 Agent 协作、MCP 生态、终端体验、安全沙箱等所有核心能力。
 :::
 
-::: tip 进阶版预告：在线 IDE + Skills
-我们即将推出**在线开发环境**，无需本地配置环境，打开浏览器即可开始学习：
+::: tip 在线 IDE + Skills
+我们推出**在线开发环境**，无需本地配置环境，打开浏览器即可开始学习：
 
 - **云端 IDE** —— 内置完整的 Node.js 24、Python、Docker 等开发环境
 - **50+ AI Skills** —— 预装丰富的 AI 辅助技能包，覆盖开发全流程
 - **开箱即用** —— 无需安装任何软件，登录即可开始编程实践
 
-让学习门槛降到最低，敬请期待！
+让学习门槛降到最低！
 :::
 
 ## 什么是 Vibe Coding？
@@ -180,7 +176,7 @@ VibeVibe 教程已于 **2026 年 1 月 25 日**恢复正式开发，持续更新
 > 
 > — Andrej Karpathy, 2025
 
-**Vibe Coding** 是 2025 年最有代表性的 AI 原生构建方式之一，也是 Collins 词典年度词汇。在 Vibe Vibe 里，我们把它放在一个更大的定位里理解：**AI 创造**。
+**Vibe Coding** 是 2025 年提出的最有代表性的 AI 原生构建方式之一，也是 Collins 词典年度词汇。在 Vibe Vibe 里，我们把它放在一个更大的定位里理解：**AI 创造**。
 
 - **用自然语言描述目标与需求**，而不是所有步骤都亲手完成
 - **让 AI 参与实现、组织和迭代**，你负责验收、判断和调整
@@ -213,12 +209,17 @@ VibeVibe 教程已于 **2026 年 1 月 25 日**恢复正式开发，持续更新
 | 创业者 / 独立开发者 | 两者皆可 | 快速搭建 MVP，独立完成产品 |
 | 想提升效率的开发者 | 基础篇 + 进阶篇 | 系统学习 AI 辅助开发工作流 |
 
-<!-- 备案期间暂时隐藏贡献者信息 -->
+
 了解更多项目信息，请前往 [GitHub 仓库](https://github.com/datawhalechina/vibe-vibe)。
 
 需要私有化部署？查看 [部署指南](/deployment/) →
 
+[![vibe-vibe stats](https://mv.datawhale.cc/badges/vibe-vibe.png)](https://mv.datawhale.cc/repo-badge?repo=vibe-vibe)
+
+
+
 <!-- 
+
 ## 贡献者名单
 
 感谢以下成员为本项目做出的贡献：
