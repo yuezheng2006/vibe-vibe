@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
-import { onMounted, watch, nextTick, h, type VNode, defineComponent, ref } from 'vue'
+import { onMounted, watch, nextTick, h, type VNode, defineComponent, ref, computed } from 'vue'
 import { useRoute, useData } from 'vitepress'
 import mediumZoom from 'medium-zoom'
 import Giscus from '@giscus/vue'
@@ -152,10 +152,14 @@ interface BeforeInstallPromptEvent extends Event {
 const PwaInstallButton = defineComponent({
   name: 'PwaInstallButton',
   setup() {
+    const route = useRoute()
     const canInstall = ref(false)
     const deferredPrompt = ref<BeforeInstallPromptEvent | null>(null)
     const isStandalone = ref(false)
     const isPwaSupported = ref(false)
+    const installLabel = computed(() =>
+      route.path.startsWith('/en/') ? 'Install App' : '安装到桌面'
+    )
 
     const updateStandalone = () => {
       const navigatorWithStandalone = window.navigator as Navigator & { standalone?: boolean }
@@ -210,7 +214,7 @@ const PwaInstallButton = defineComponent({
           class: 'pwa-install-button',
           onClick
         },
-        '安装到桌面'
+        installLabel.value
       )
     }
   }
@@ -350,6 +354,26 @@ export default {
   Layout: () => {
     const route = useRoute()
     const { frontmatter, isDark } = useData();
+    const copy = computed(() =>
+      route.path.startsWith('/en/')
+        ? {
+            alphaBanner:
+              '⚠️ Alpha preview warning: this is an early internal build. Some parts are still incomplete and issues may exist. Feedback is very welcome.',
+            feedbackLabel: 'Feedback & Suggestions:',
+            feedbackText:
+              'Found something inaccurate or want to add more context? Leave a comment below, or open an issue on ',
+            issueLink: 'GitHub',
+            starText: 'Give us a Star:'
+          }
+        : {
+            alphaBanner:
+              '⚠️ Alpha内测版本警告：此为早期内部构建版本，尚不完整且可能存在错误，欢迎大家提Issue反馈问题或建议',
+            feedbackLabel: '反馈与建议：',
+            feedbackText: '发现内容有误或想补充？欢迎在下方评论区留言，或到 ',
+            issueLink: 'GitHub 提 Issue',
+            starText: '点我给个 Star 吧：'
+          }
+    )
     
     return h(DefaultTheme.Layout, null, {
       'layout-top': () => {
@@ -363,13 +387,13 @@ export default {
             fontSize: '14px',
             lineHeight: '1.5'
           }
-        }, '⚠️ Alpha内测版本警告：此为早期内部构建版本，尚不完整且可能存在错误，欢迎大家提Issue反馈问题或建议')
+        }, copy.value.alphaBanner)
       },
       'doc-after': () => {
         const children: VNode[] = [
           h('div', { class: 'feedback-tip' }, [
-            h('strong', null, '反馈与建议：'),
-            '发现内容有误或想补充？欢迎在下方评论区留言，或到 ',
+            h('strong', null, copy.value.feedbackLabel),
+            copy.value.feedbackText,
             h(
               'a',
               {
@@ -377,11 +401,11 @@ export default {
                 target: '_blank',
                 rel: 'noopener noreferrer'
               },
-              'GitHub 提 Issue'
+              copy.value.issueLink
             ),
             ,
             h('div', { class: 'feedback-actions' }, [
-              h('span', { class: 'github-star-text' }, '点我给个 Star 吧：'),
+              h('span', { class: 'github-star-text' }, copy.value.starText),
               h('span', { class: 'github-star-wrap' }, [
                 h('iframe', {
                   class: 'github-star-btn',
@@ -413,7 +437,7 @@ export default {
                 emitMetadata: "1",
                 inputPosition: "bottom",
                 theme: isDark.value ? "dark_dimmed" : "light",
-                lang: "zh-CN",
+                lang: route.path.startsWith('/en/') ? 'en' : 'zh-CN',
                 loading: "lazy"
               })
             ])
