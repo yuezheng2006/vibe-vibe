@@ -2,8 +2,8 @@
 layout: home
 hero:
   name: "Vibe Vibe"
-  text: "AI Programming for Everyone"
-  tagline: "Build Products Without Writing Code\nFrom Zero to Full-Stack Development, Amplify Your Creative Genius"
+  text: "AI Creation for Everyone"
+  tagline: "More than coding: turn ideas into real products\nFrom first prototype to launch, build with AI and ship with confidence"
   image:
     src: /logo.png
     alt: Vibe Coding
@@ -23,17 +23,17 @@ hero:
 
 features:
   - title: Beginner-Friendly
-    details: No programming experience required. Starting from "what is code", we'll guide you step-by-step to build your first project
-  - title: AI-Driven Development
-    details: Learn to "command AI to write code" instead of "writing code yourself". Describe requirements in natural language and let AI implement them
+    details: No programming experience required. Start from an idea, and we guide you step by step until you build your first real project
+  - title: AI Creation Workflow
+    details: Learn how to use AI to shape ideas, prototype quickly, refine content, improve interactions, and keep shipping instead of only focusing on code generation
   - title: MVP Mindset
     details: Master the "Minimum Viable Product" philosophy. Validate your ideas with minimal time and avoid the trap of feature creep
-  - title: Modern Tech Stack
-    details: Advanced track based on Next.js + TypeScript + Drizzle, learning enterprise-level full-stack development best practices
+  - title: From Work to Product
+    details: Start by making something real, then move into full-stack architecture, deployment, and engineering habits when you are ready
   - title: Security Awareness
     details: Build security baseline awareness from day one. Learn to protect user data and avoid common security vulnerabilities
   - title: Progressive Learning
-    details: Fundamentals build cognition, Advanced dives into practice. Two paths for different stages of your journey
+    details: Fundamentals help you make your first project real, and Advanced helps you keep evolving it into a more complete product
 ---
 
 <style>
@@ -58,7 +58,7 @@ features:
 
 /* Guide text styling */
 .VPHero .tagline::after {
-  content: "Click the buttons below to start your AI programming journey";
+  content: "Click below to start your AI creation journey";
   display: block;
   margin-top: 1rem;
   color: #6B7280;
@@ -116,13 +116,13 @@ features:
 
 <div style="flex: 1; min-width: 300px; padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #15A05111 0%, #15A05122 100%); border: 1px solid #15A05133;">
 
-### Fundamentals: Zero to Hero
+### Fundamentals: From Idea to First Project
 
 <a href="/en/Basic/" style="display: inline-block; margin-bottom: 1rem; padding: 0.5rem 1.5rem; background: #15A051; color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">Start Reading Fundamentals →</a>
 
 **Target Audience**: Complete beginners, liberal arts students, designers, product managers
 
-**Learning Goals**: Understand Vibe Coding · Build your first project with AI · Master MVP mindset
+**Learning Goals**: Understand the AI creation workflow · Build your first project with AI · Master MVP mindset
 
 **Content Preview**:
 - **Awakening**: Mental shift from coder to commander
@@ -137,13 +137,13 @@ features:
 
 <div style="flex: 1; min-width: 300px; padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #45523E11 0%, #45523E22 100%); border: 1px solid #45523E33;">
 
-### Advanced: From Zero to Launch - A Pitfall Avoidance Guide
+### Advanced: From Project to Product
 
 <a href="/en/Advanced/" style="display: inline-block; margin-bottom: 1rem; padding: 0.5rem 1.5rem; background: #45523E; color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">Start Reading Advanced →</a>
 
 **Target Audience**: Developers who want to understand the complete project delivery process
 
-**Learning Goals**: Full-stack tech stack · Frontend-backend architecture · Production-grade deployment · Engineering mindset
+**Learning Goals**: Full-stack architecture · Production-grade deployment · Collaboration and iteration · Engineering judgment
 
 **Content Preview** (2/16 completed, other chapters have preface available):
 - **Development Basics**: Environment setup · Dev tools · AI tuning · Documentation-driven
@@ -189,27 +189,27 @@ Lowering the learning barrier to the minimum, stay tuned!
 >
 > — Andrej Karpathy, 2025
 
-**Vibe Coding** is the hottest programming approach of 2025 (Collins Dictionary Word of the Year). Its core philosophy:
+**Vibe Coding** is one of the most influential AI-native ways of building in 2025 (and a Collins Dictionary Word of the Year). On Vibe Vibe, we treat it as an important path inside a broader idea: **AI creation**.
 
-- **Describe requirements in natural language**, not hand-write code
-- **Let AI generate code**, you review and adjust
-- **Iterate quickly**, building something that works is more important than perfect code
+- **Describe goals and requirements in natural language**, instead of manually doing every step yourself
+- **Let AI help with implementation, structure, and iteration**, while you review and steer
+- **Move quickly from idea to working artifact**, because something real teaches you faster than a perfect plan
 
-Simply put: **You handle the ideas, AI handles the implementation.**
+Simply put: **you provide direction, judgment, and taste; AI helps you make the work real.**
 
-## This Course Won't Make You a Senior Programmer
+## This Course Is Bigger Than Just "Learning AI Programming"
 
-- You won't master algorithms and data structures
-- You won't become a framework source code expert
-- You won't gain big tech interview passing ability
+This course is not designed to turn you into a senior engineer overnight.
+
+You will not suddenly master algorithms, framework internals, or interview-style computer science.
 
 But you will gain:
 
-- Ability to independently deliver products
-- Methods to efficiently collaborate with AI
-- Execution power to turn ideas into reality
+- The ability to turn ideas into real projects
+- A repeatable way to collaborate with AI
+- Better product judgment, iteration habits, and shipping confidence
 
-These are two different paths, each with its own value.
+That is a different goal, but it is an extremely practical one.
 
 ## Who Should Learn This?
 

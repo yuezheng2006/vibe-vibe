@@ -3,6 +3,7 @@ import { onMounted, watch, nextTick, h, type VNode, defineComponent, ref, comput
 import { useRoute, useData } from 'vitepress'
 import mediumZoom from 'medium-zoom'
 import Giscus from '@giscus/vue'
+import LocaleSwitch from './components/LocaleSwitch.vue'
 // Chapter 01: Environment Setup (flat naming: 01-0 for preface, 01-1 for main content)
 import InteractiveDemo from './components/01-0-InteractiveDemo.vue'
 import NodeVersionManager from './components/01-0-NodeVersionManager.vue'
@@ -348,6 +349,7 @@ export default {
     app.component('HypothesisValidationCycle', HypothesisValidationCycle)
     app.component('InterviewQuestions', InterviewQuestions)
     app.component('BasicEditionUpdateBox', BasicEditionUpdateBox)
+    app.component('LocaleSwitch', LocaleSwitch)
   },
   
   // 1. 布局扩展：注入 Giscus 评论

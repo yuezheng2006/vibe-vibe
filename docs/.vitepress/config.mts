@@ -132,6 +132,7 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
             text: '实践案例篇',
             link: '/Practice/'
           },
+          { component: 'LocaleSwitch' },
         ],
         docFooter: {
           prev: '上一篇',
@@ -219,6 +220,7 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
             text: 'Practice',
             link: '/en/Practice/'
           },
+          { component: 'LocaleSwitch' },
         ],
         docFooter: {
           prev: 'Previous',

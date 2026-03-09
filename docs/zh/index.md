@@ -2,8 +2,8 @@
 layout: home
 hero:
   name: "Vibe Vibe"
-  text: "人人都能学会 AI 编程"
-  tagline: "不写代码，也能做产品\n从零基础到全栈开发，放大你的天才创意"
+  text: "人人都能开始 AI 创造"
+  tagline: "不止写代码，更把想法做成作品\n从第一个原型到正式上线，用 AI 放大你的创意与执行力"
   image:
     src: /logo.png
     alt: Vibe Coding
@@ -23,17 +23,17 @@ hero:
 
 features:
   - title: 零基础友好
-    details: 不需要任何编程经验，从"什么是代码"开始，手把手带你做出第一个作品
-  - title: AI 驱动开发
-    details: 学会"指挥 AI 写代码"而不是"自己写代码"，用自然语言描述需求，让 AI 帮你实现
+    details: 不需要任何编程经验，从一个想法开始，手把手带你把第一个作品真正做出来
+  - title: AI 创造工作流
+    details: 学会用 AI 帮你梳理想法、搭原型、补内容、改交互、推上线，而不只是把它当成写代码工具
   - title: MVP 思维
     details: 掌握"最小可行产品"理念，用最少的时间验证你的想法，避免功能蔓延的陷阱
-  - title: 现代技术栈
-    details: 进阶篇基于 Next.js + TypeScript + Drizzle，学习企业级全栈开发最佳实践
+  - title: 从作品到产品
+    details: 先把东西做出来，再逐步进入全栈架构、部署上线和工程化实践，学习曲线更自然
   - title: 安全意识
     details: 从第一天就建立安全底线意识，学会保护用户数据和避免常见安全漏洞
   - title: 渐进式学习
-    details: 基础篇建立认知，进阶篇深入实战。两条路径，适合不同阶段的你
+    details: 基础篇先帮你完成第一个作品，进阶篇再带你把作品推进成更完整的产品
 ---
 
 <style>
@@ -58,7 +58,7 @@ features:
 
 /* 引导话语样式 */
 .VPHero .tagline::after {
-  content: "点击下方按钮，立即开始你的 AI 编程之旅";
+  content: "点击下方按钮，开始你的 AI 创造之旅";
   display: block;
   margin-top: 1rem;
   color: #6B7280;
@@ -116,13 +116,13 @@ features:
 
 <div style="flex: 1; min-width: 300px; padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #15A05111 0%, #15A05122 100%); border: 1px solid #15A05133;">
 
-### 基础篇：零基础入门
+### 基础篇：从想法到第一个作品
 
 <a href="/Basic/" style="display: inline-block; margin-bottom: 1rem; padding: 0.5rem 1.5rem; background: #15A051; color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">开始阅读基础篇 →</a>
 
 **适合人群**：从未写过代码的小白、文科生、设计师、产品经理
 
-**学习目标**：理解 Vibe Coding · 用 AI 做出第一个作品 · 掌握 MVP 思维
+**学习目标**：理解 AI 创造工作流 · 用 AI 做出第一个作品 · 掌握 MVP 思维
 
 **内容预览**：
 - **觉醒**：从码农到指挥官的思维转变
@@ -137,13 +137,13 @@ features:
 
 <div style="flex: 1; min-width: 300px; padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg, #45523E11 0%, #45523E22 100%); border: 1px solid #45523E33;">
 
-### 进阶篇：从0到上线的避坑指南
+### 进阶篇：从作品到产品
 
 <a href="/Advanced/" style="display: inline-block; margin-bottom: 1rem; padding: 0.5rem 1.5rem; background: #45523E; color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">开始阅读进阶篇 →</a>
 
 **适合人群**：想了解完整项目交付流程的开发者
 
-**学习目标**：全栈技术栈 · 前后端架构 · 生产级部署 · 工程化思维
+**学习目标**：全栈架构 · 生产级部署 · 协作迭代 · 工程判断力
 
 **内容预览**（已完成2/16，其余章节可阅读序言）：
 - **开发基础**：环境搭建 · 开发工具 · AI 调教 · 文档驱动
@@ -189,27 +189,27 @@ VibeVibe 教程已于 **2026 年 1 月 25 日**恢复正式开发，持续更新
 > 
 > — Andrej Karpathy, 2025
 
-**Vibe Coding** 是 2025 年最火的编程方式（Collins 词典年度词汇）。它的核心理念是：
+**Vibe Coding** 是 2025 年最有代表性的 AI 原生构建方式之一，也是 Collins 词典年度词汇。在 Vibe Vibe 里，我们把它放在一个更大的定位里理解：**AI 创造**。
 
-- **用自然语言描述需求**，而不是手写代码
-- **让 AI 生成代码**，你来验收和调整
-- **快速迭代**，做出能用的东西比代码完美更重要
+- **用自然语言描述目标与需求**，而不是所有步骤都亲手完成
+- **让 AI 参与实现、组织和迭代**，你负责验收、判断和调整
+- **更快把想法变成真实成果**，因为做出东西往往比空想和完美规划更能推动学习
 
-简单说：**你负责想法，AI 负责实现。**
+简单说：**你负责方向、判断和审美，AI 帮你把作品做出来。**
 
-## 这门课不会让你成为资深程序员
+## 这门课不只是教你学 AI 编程
 
-- 你不会精通算法和数据结构
-- 你不会成为框架源码专家
-- 你不会获得大厂面试通关能力
+这门课不是为了把你一次训练成资深工程师。
+
+你不会突然精通算法、框架源码，或者一下获得大厂面试通关能力。
 
 但你会获得：
 
-- 独立交付产品的能力
-- 与 AI 高效协作的方法
-- 把想法变成现实的执行力
+- 把想法做成真实作品的能力
+- 一套可重复使用的 AI 协作方法
+- 更强的产品判断、迭代习惯和上线信心
 
-这是两条不同的路径，各有价值。
+这和传统程序员成长路线不是一回事，但它同样非常有价值，而且更贴近很多普通人真正想解决的问题。
 
 ## 适合谁学习？
 
