@@ -31,3 +31,5 @@ Vibe Vibe 会优先根据你的浏览器语言进入中文或英文版本。
 
 - [进入中文版本](/zh/)
 - [Continue in English](/en/)
+
+[![vibe-vibe stats](https://mv.datawhale.cc/badges/vibe-vibe.png)](https://mv.datawhale.cc/repo-badge?repo=vibe-vibe)

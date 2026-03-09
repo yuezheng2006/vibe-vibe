@@ -213,7 +213,9 @@ That is a different goal, but it is an extremely practical one.
 | Entrepreneur / Indie Developer | Both | Quickly build MVPs, complete products independently |
 | Developers Seeking Efficiency | Fundamentals + Advanced | Systematically learn AI-assisted development workflow |
 
-<!-- Temporarily hiding contributor info during filing period -->
+[![vibe-vibe stats](https://mv.datawhale.cc/badges/vibe-vibe.png)](https://mv.datawhale.cc/repo-badge?repo=vibe-vibe)
+
+
 For more project information, visit the [GitHub Repository](https://github.com/datawhalechina/vibe-vibe).
 
 Need private deployment? Check out the [Deployment Guide](/deployment/) →
