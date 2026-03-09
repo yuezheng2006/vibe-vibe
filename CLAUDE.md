@@ -1,5 +1,11 @@
 # CLAUDE.md
 
+## 项目配置
+
+- **R2 静态资源**：`vincent-bucket/vibe-vibe-assets/`（配置：`config/r2-assets.conf`）
+  - 批量上传：`./scripts/upload-r2-assets.sh`
+  - 单文件：`npx wrangler r2 object put vincent-bucket/vibe-vibe-assets/路径/文件名 --file=./本地文件`
+
 ## 项目概述
 
 这是一本面向 Vibe Coder 的中文教程（VitePress 站点），教读者用 AI coding agent（主要是 Claude Code）从零构建和部署 Web 应用。
