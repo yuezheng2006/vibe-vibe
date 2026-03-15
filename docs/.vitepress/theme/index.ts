@@ -244,22 +244,17 @@ const SiteLayout = defineComponent({
             homeGuideText: 'Click below to start your AI creation journey',
             previewLabel: 'Alpha Preview:',
             previewText:
-              'This is an early internal build. Some chapters are still incomplete and issues may exist. Feedback is very welcome on ',
+              'This is an early internal build. Some chapters are still incomplete and issues may exist. Feedback is very welcome in the comment section below.',
             feedbackLabel: 'Feedback & Suggestions:',
-            feedbackText:
-              'Found something inaccurate or want to add more context? Leave a comment below, or open an issue on ',
-            issueLink: 'GitHub',
-            starText: 'Give us a Star:'
+            feedbackText: 'Found something inaccurate or want to add more context? Leave a comment below.'
           }
         : {
             homeGuideText: '点击下方按钮，开始你的 AI 创造之旅',
             previewLabel: 'Alpha内测提示：',
             previewText:
-              '当前为早期内部构建版本，部分章节仍在完善中，也可能存在问题，欢迎到 ',
+              '当前为早期内部构建版本，部分章节仍在完善中，也可能存在问题，欢迎在下方评论区留言。',
             feedbackLabel: '反馈与建议：',
-            feedbackText: '发现内容有误或想补充？欢迎在下方评论区留言，或到 ',
-            issueLink: 'GitHub 提 Issue',
-            starText: '点我给个 Star 吧：'
+            feedbackText: '发现内容有误或想补充？欢迎在下方评论区留言。'
           }
     )
 
@@ -271,17 +266,7 @@ const SiteLayout = defineComponent({
     const renderPreviewNotice = () =>
       h('div', { class: 'preview-notice' }, [
         h('strong', null, copy.value.previewLabel),
-        copy.value.previewText,
-        h(
-          'a',
-          {
-            href: 'https://github.com/datawhalechina/vibe-vibe/issues',
-            target: '_blank',
-            rel: 'noopener noreferrer'
-          },
-          copy.value.issueLink
-        ),
-        '.'
+        copy.value.previewText
       ])
 
     return () =>
@@ -302,28 +287,7 @@ const SiteLayout = defineComponent({
             h('div', { class: 'feedback-tip' }, [
               h('strong', null, copy.value.feedbackLabel),
               copy.value.feedbackText,
-              h(
-                'a',
-                {
-                  href: 'https://github.com/datawhalechina/vibe-vibe/issues',
-                  target: '_blank',
-                  rel: 'noopener noreferrer'
-                },
-                copy.value.issueLink
-              ),
               h('div', { class: 'feedback-actions' }, [
-                h('span', { class: 'github-star-text' }, copy.value.starText),
-                h('span', { class: 'github-star-wrap' }, [
-                  h('iframe', {
-                    class: 'github-star-btn',
-                    src: 'https://ghbtns.com/github-btn.html?user=datawhalechina&repo=vibe-vibe&type=star&count=false&size=large',
-                    title: 'GitHub',
-                    height: '30',
-                    width: '120',
-                    scrolling: '0',
-                    frameborder: '0'
-                  })
-                ]),
                 h(PwaInstallButton)
               ])
             ])

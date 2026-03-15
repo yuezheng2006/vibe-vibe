@@ -41,7 +41,7 @@ declare global {
 const SITE_TITLE = "VibeVibe"
 const SITE_TITLE_FRIENDLY = "Vibe Vibe"  // 用于显示的友好名称
 const SITE_DESCRIPTION = "Vibe Coding 全栈实战教程 - 从 Next.js 到 AI 辅助开发，用 Vibe Coding 的方式重塑你的编程工作流。涵盖零基础入门、全栈开发、数据库、部署运维等核心主题。"
-const SITE_URL_FALLBACK = 'https://www.vibevibe.cn'
+const SITE_URL_FALLBACK = 'https://vibe.cyber101.cc'
 
 function normalizeSiteUrl(url: string): string {
   return url.trim().replace(/\/+$/, '');
@@ -127,6 +127,20 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
               { text: '工程实施与质量保障', link: '/Articles/04-engineering-practices/' },
               { text: '安全、合规与局限性', link: '/Articles/05-security-compliance/' },
               { text: '商业应用与行业趋势', link: '/Articles/06-business-trends/' },
+            ]
+          },
+          {
+            text: 'OpenClaw 教程',
+            items: [
+              { text: '序言', link: '/OpenClaw/' },
+              { text: 'Day 1: 初识 OpenClaw', link: '/OpenClaw/01-day1' },
+              { text: 'Day 2: 10 分钟搭建', link: '/OpenClaw/02-day2' },
+              { text: 'Day 3: 给助手一个灵魂', link: '/OpenClaw/03-day3' },
+              { text: 'Day 4: 接入数字生活', link: '/OpenClaw/04-day4' },
+              { text: 'Day 5: 解锁技能树', link: '/OpenClaw/05-day5' },
+              { text: 'Day 6: 让助手主动工作', link: '/OpenClaw/06-day6' },
+              { text: 'Day 7: 进阶与未来', link: '/OpenClaw/07-day7' },
+              { text: '资源聚合', link: '/OpenClaw/resources' },
             ]
           },
           {
@@ -285,16 +299,12 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
     ['link', { rel: 'alternate', hreflang: 'en-US', href: `${SITE_URL}/en/` }],
     ['link', { rel: 'alternate', hreflang: 'zh-CN', href: `${SITE_URL}/zh/` }],
     ['link', { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}/` }],
-    ['link', { rel: 'author', href: 'https://github.com/datawhalechina/vibe-vibe/graphs/contributors' }],
-
     // DNS 预解析 - 提前解析外部域名
     ['link', { rel: 'dns-prefetch', href: '//u.vibevibe.cn' }],
-    ['link', { rel: 'dns-prefetch', href: '//github.com' }],
     ['link', { rel: 'dns-prefetch', href: '//www.googletagmanager.com' }],
 
     // Preconnect - 比 DNS预解析更强，建立 TCP+TLS 连接
     ['link', { rel: 'preconnect', href: 'https://u.vibevibe.cn' }],
-    ['link', { rel: 'preconnect', href: 'https://github.com', crossorigin: 'anonymous' }],
 
     // Preload 关键资源 - 优先加载重要资源
     ['link', { rel: 'preload', href: '/logo.png', as: 'image' }],
@@ -335,12 +345,14 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
     const isArticle = pageData.relativePath !== 'index.md' &&
                       (pageData.relativePath.startsWith('Basic/') ||
                        pageData.relativePath.startsWith('Advanced/') ||
-                       pageData.relativePath.startsWith('Practice/'));
+                       pageData.relativePath.startsWith('Practice/') ||
+                       pageData.relativePath.startsWith('OpenClaw/'));
 
     // 自动分类：根据路径生成 section 名称
     const articleSection = pageData.relativePath.startsWith('Basic/') ? '基础篇' :
                           pageData.relativePath.startsWith('Advanced/') ? '进阶篇' :
                           pageData.relativePath.startsWith('Practice/') ? '实践篇' :
+                          pageData.relativePath.startsWith('OpenClaw/') ? 'OpenClaw 教程' :
                           pageData.relativePath.startsWith('Articles/') ? '优质文章' : '编程教程';
 
     // 动态关键词生成
@@ -353,6 +365,8 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
         return [...baseKeywords, '全栈开发', 'TypeScript', 'React', 'Tailwind CSS', '数据库', '部署'].join(', ');
       } else if (path.startsWith('Practice/')) {
         return [...baseKeywords, '项目实战', '全栈项目', 'AI Agent', '实战案例'].join(', ');
+      } else if (path.startsWith('OpenClaw/')) {
+        return [...baseKeywords, 'OpenClaw', 'AI助手', '私人助理', 'Clawdbot'].join(', ');
       } else if (path.startsWith('Articles/')) {
         return ['AI编程', '技术博客', 'OpenAI', 'Anthropic', 'Vercel', '开发资源'].join(', ');
       }
@@ -376,17 +390,14 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
           '@type': 'Organization',
           '@id': `${SITE_URL}/#organization`,
           name: 'Datawhale',
-          url: 'https://github.com/datawhalechina',
+          url: SITE_URL,
           logo: {
             '@type': 'ImageObject',
             url: `${SITE_URL}/logo.png`,
             width: 512,
             height: 512
           },
-          sameAs: [
-            'https://github.com/datawhalechina',
-            'https://github.com/datawhalechina/vibe-vibe'
-          ]
+          sameAs: []
         },
         // 站内搜索框
         potentialAction: {
@@ -409,10 +420,7 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
           url: `${SITE_URL}/logo.png`
         },
         description: '让每个人都能成为 Builder - AI 时代的开源学习社区',
-        sameAs: [
-          'https://github.com/datawhalechina',
-          'https://github.com/datawhalechina/vibe-vibe'
-        ]
+        sameAs: []
       },
       // 作者 Profile Schema
       {
@@ -687,6 +695,7 @@ Allow: /security.txt
             if (page.startsWith('Basic/')) category = '基础篇';
             else if (page.startsWith('Advanced/')) category = '进阶篇';
             else if (page.startsWith('Practice/')) category = '实践篇';
+            else if (page.startsWith('OpenClaw/')) category = 'OpenClaw 教程';
             else if (page.startsWith('Articles/')) category = '优质文章';
 
             // 计算阅读时间
@@ -742,8 +751,8 @@ Allow: /security.txt
         const channelDescription = safeCdata(SITE_DESCRIPTION);
         const channelLanguage = 'zh-CN';
         const channelLastBuildDate = escapeXml(lastBuildDate.toUTCString());
-        const channelManagingEditor = 'Eyre (contact@vibevibe.cn)';
-        const channelWebMaster = 'Eyre (contact@vibevibe.cn)';
+        const channelManagingEditor = 'Eyre (contact@cyber101.cc)';
+        const channelWebMaster = 'Eyre (contact@cyber101.cc)';
         const channelCategory = '编程教程';
 
         const rssXml = [
@@ -880,7 +889,7 @@ Allow: /security.txt
           excludeFolders: ['en', 'zh', 'public', 'assets', '.vitepress', '.claude', 'deployment'],
 
         manualSortFileNameByPriority: [
-          'Basic', 'Advanced', 'Practice', 'Articles', 'Basic-old',
+          'Basic', 'Advanced', 'Practice', 'OpenClaw', 'Articles', 'Basic-old',
           'Basic/00-preface', 'Basic/01-awakening', 'Basic/02-mindset', 'Basic/03-technique',
           'Basic/04-practice-0-to-1', 'Basic/05-advanced', 'Basic/06-learning-paths',
           'Basic/99-appendix', 'Basic/100-epilogue', 'Basic/101-next-part',
@@ -891,7 +900,8 @@ Allow: /security.txt
           'Advanced/13-domain-dns', 'Advanced/14-vps-ops-deploy', 'Advanced/15-seo-analytics', 'Advanced/16-user-feedback-iteration',
           'Advanced/99-next-level',
           'Practice/01-for-liberal-arts', 'Practice/02-for-stem', 'Practice/03-for-professionals',
-          'Practice/10-core-skills', 'Practice/11-ai-agents', 'Practice/12-fullstack-projects', 'Practice/13-tools-integration',
+          'Practice/10-core-skills', 'Practice/11-ai-agents', 'Practice/12-fullstack-projects', 'Practice/13-tools-integration', 'Practice/14-talkcoach',
+          'OpenClaw', 'OpenClaw/01-day1', 'OpenClaw/02-day2', 'OpenClaw/03-day3', 'OpenClaw/04-day4', 'OpenClaw/05-day5', 'OpenClaw/06-day6', 'OpenClaw/07-day7', 'OpenClaw/resources',
           'Articles/01-core-concepts', 'Articles/02-technical-architecture', 'Articles/03-toolchain-frameworks',
           'Articles/04-engineering-practices', 'Articles/05-security-compliance', 'Articles/06-business-trends'
         ],
@@ -976,9 +986,7 @@ Allow: /security.txt
       }
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/datawhalechina/vibe-vibe' }
-    ],
+    socialLinks: [],
 
     // footer: {
     //   message: '',
