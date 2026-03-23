@@ -1131,5 +1131,7 @@ graph TB
 - Prerequisite: 2.2 VibeCoding Workflow
 - Details: 2.4 Project Rules Configuration
 - Extension: [MCP Official Repository](https://github.com/modelcontextprotocol/servers)
-- Extension: [Plugin Official Documentation](hhttps://github.com/anthropics/claude-plugins-official)
-- Extension: [Agent Skills Official Documentation](https://code.claude.com/docs/zh-CN/skills)
+- Extension: [Official plugins repository](https://github.com/anthropics/claude-plugins-official)
+- Extension (Agent Skills, Claude Docs): [Overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) · [Authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices) · [Quickstart](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/quickstart) · [Skills in the API](https://platform.claude.com/docs/en/build-with-claude/skills-guide)
+- Extension (Claude Code project skills): [Claude Code docs · Skills](https://code.claude.com/docs/en/skills)
+- Extension (community plugin · codebase knowledge graph): [Understand Anything](https://github.com/Lum1104/Understand-Anything) — Claude Code plugin marketplace: multi-agent scan, searchable knowledge graph, interactive dashboard; also supports Codex, OpenCode, Cursor, etc. (see [README](https://github.com/Lum1104/Understand-Anything/blob/main/README.md))

@@ -11,6 +11,10 @@ title: "第二章：AI 使用说明书"
 想全面了解 Claude Code 有哪些能力？访问 **[cclog.vibevibe.cn](https://cclog.vibevibe.cn)** 查看从 v0.2 到 v2.1 的完整功能梳理，涵盖 220+ 个版本、1000+ 项更新，包括 AI 模型、多 Agent 协作、MCP 生态、终端体验、安全沙箱等所有核心能力。
 :::
 
+::: tip 📘 Claude Code 官方中文文档（与产品同步）
+Anthropic 在 **code.claude.com** 维护完整**中文**文档，安装说明、工作流、MCP、Skills、设置与排错都以官方为准。建议收藏：**[概述](https://code.claude.com/docs/zh-CN/overview)** · **[快速入门](https://code.claude.com/docs/zh-CN/quickstart)** · **[常见工作流](https://code.claude.com/docs/zh-CN/common-workflows)** · **[最佳实践](https://code.claude.com/docs/zh-CN/best-practices)** · **[MCP](https://code.claude.com/docs/zh-CN/mcp)** · **[Skills / 自定义命令](https://code.claude.com/docs/zh-CN/skills)** · **[智能体团队](https://code.claude.com/docs/zh-CN/agent-teams)** · **[设置](https://code.claude.com/docs/zh-CN/settings)** · **[故障排除](https://code.claude.com/docs/zh-CN/troubleshooting)**
+:::
+
 ## 序言
 
 > 在上一章，你已经了解了模型与工具的区别，并完成了开发环境的搭建。现在，我们来学习如何让 AI 更好地为你工作。
@@ -70,6 +74,8 @@ title: "第二章：AI 使用说明书"
 ### 拓展知识
 
 老师傅告诉你，当你熟练掌握核心工作流后，还可以探索多代理系统：让多个 AI 协同工作，一个写代码，另一个审查；一个写测试，另一个写文档。它们可以并行处理提高效率，或串行处理保证质量。这部分内容已在 2.2 VibeCoding 工作流中详细讲解。
+
+若你还想对照社区整理的**提示词库、Skills 与文档化目录约定**，可阅读 [附录 H：社区 Vibe Coding 资源](/Basic/99-appendix/h-community-vibe-coding-resources)（以 [vibe-coding-cn](https://github.com/2025Emma/vibe-coding-cn) 为主要入口之一）。需要**通读对方 README 原文**时，可直接打开独立章节 [Vibe Coding 指南（社区原文）](/VibeCodingCN/02-readme-full)。
 
 现在先掌握核心工作流，一步一个脚印。
 

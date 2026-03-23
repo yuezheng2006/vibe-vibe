@@ -17,6 +17,7 @@ This category covers the practical side of AI-assisted development: choosing the
 
 | Article | Author | Key Question |
 |---|---|---|
+| [Anthropic Academy: Claude 101 & course index](./anthropic-academy-claude-101.md) | Anthropic (official) | Where do I start with Anthropic’s free Claude 101 and related Academy courses? |
 | [Claude Code Swarms](./claude-code-swarms.md) | Addy Osmani | How do you coordinate multiple AI agents on a single project? |
 | [How to Write Good Specs for AI Agents](./how-to-write-good-spec-for-ai-agents.md) | Addy Osmani | What makes a specification effective for AI consumption? |
 | [AI-Driven Prototyping: v0, Bolt, and Lovable Compared](./ai-driven-prototyping-v0-bolt-and-lovable-compared.md) | Addy Osmani | Which AI prototyping tool fits your needs? |

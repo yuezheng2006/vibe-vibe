@@ -11,6 +11,10 @@ title: "Chapter 2: AI User Guide"
 Want a complete overview of what Claude Code can do? Visit **[cclog.vibevibe.cn](https://cclog.vibevibe.cn)** for a full breakdown of features from v0.2 to v2.1, covering 220+ versions and 1000+ updates, including AI models, multi-Agent collaboration, the MCP ecosystem, terminal experience, security sandboxes, and every other core capability.
 :::
 
+::: tip 📘 Official Claude Code documentation
+Anthropic publishes the canonical docs on **code.claude.com**. Bookmark: **[Overview](https://code.claude.com/docs/en/overview)** · **[Quickstart](https://code.claude.com/docs/en/quickstart)** · **[Common workflows](https://code.claude.com/docs/en/common-workflows)** · **[Best practices](https://code.claude.com/docs/en/best-practices)** · **[MCP](https://code.claude.com/docs/en/mcp)** · **[Skills](https://code.claude.com/docs/en/skills)** · **[Agent teams](https://code.claude.com/docs/en/agent-teams)** · **[Settings](https://code.claude.com/docs/en/settings)** · **[Troubleshooting](https://code.claude.com/docs/en/troubleshooting)**. For Chinese, use the **`/docs/zh-CN/...`** paths (same page names).
+:::
+
 ## Preface
 
 > In the previous chapter, you learned the difference between models and tools, and finished setting up your development environment. Now, let's learn how to get AI to work better for you.
@@ -70,6 +74,8 @@ Before wrapping up the preface, the experienced mentor also passes on a debuggin
 ### Additional Knowledge
 
 The experienced mentor tells you that once you've mastered the core workflow, you can also explore multi-agent systems: have multiple AIs collaborate, with one writing code and another reviewing it; one writing tests and another writing documentation. They can work in parallel to improve efficiency, or in sequence to ensure quality. This part is already covered in detail in 2.2 The VibeCoding Workflow.
+
+If you also want a community-maintained **prompt library, Skills, and document-folder conventions** for comparison, read [Appendix H: Community Vibe Coding Resources](/en/Basic/99-appendix/h-community-vibe-coding-resources) (including [vibe-coding-cn](https://github.com/2025Emma/vibe-coding-cn) as a primary entry point). For a **verbatim README read-through**, open the standalone section [full README (Chinese)](/VibeCodingCN/02-readme-full).
 
 For now, focus on mastering the core workflow, one step at a time.
 

@@ -22,7 +22,7 @@ tags:
 
 
 
-**Claude Code 现已支持[智能体团队](https://code.claude.com/docs/en/agent-teams)**（swarms）。不再是单个智能体按顺序完成任务，而是由一个主智能体将工作委派给多个团队成员，它们并行工作——研究、调试和构建，同时相互协调。在你的 `settings.json` 中启用智能体团队功能来试用它。如果你一直在通过 Conductor、Gas Town 或类似工具探索多智能体编排，这个消息会让你兴奋。
+**Claude Code 现已支持[智能体团队](https://code.claude.com/docs/zh-CN/agent-teams)**（swarms）。不再是单个智能体按顺序完成任务，而是由一个主智能体将工作委派给多个团队成员，它们并行工作——研究、调试和构建，同时相互协调。在你的 `settings.json` 中启用智能体团队功能来试用它。如果你一直在通过 Conductor、Gas Town 或类似工具探索多智能体编排，这个消息会让你兴奋。
 
 ![展示主智能体将任务委派给多个团队成员的示意图，每个成员并行处理项目的不同方面](/images/articles/localized/03-toolchain-frameworks/claude-code-swarms/01.webp)
 
@@ -236,7 +236,7 @@ claude --teammate-mode in-process
 
 这就是当智能体实际上可以协调时[智能体工程](https://addyosmani.com/blog/agentic-engineering/)的样子。协调 AI 智能体系统的架构在这里。明智地使用它。
 
-完整的 [Claude Code 智能体团队文档](https://code.claude.com/docs/en/agent-teams?有完整的设置和使用指南。
+完整的 [Claude Code 智能体团队文档](https://code.claude.com/docs/zh-CN/agent-teams) 中有设置与使用说明。
 
 ---
 

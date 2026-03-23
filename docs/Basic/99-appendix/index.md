@@ -18,6 +18,7 @@ order: 99
 | [E. API Key、环境变量与基础安全](./e-api-key-env-security.md) | `.env`、`.gitignore`、上线前检查 | 接 API、准备上线时 |
 | [F. Vibe Coding 的能与不能](./f-vibe-coding-can-and-cannot.md) | 能力边界、适用场景和不适用场景 | 想判断项目该不该这样做时 |
 | [G. 进阶版跳转地图](./g-advanced-jump-map.md) | 基础版各边界对应的进阶入口 | 想继续深入某一块时 |
+| [H. 社区 Vibe Coding 资源](./h-community-vibe-coding-resources.md) | 以 vibe-coding-cn 等仓库为对照的补充阅读与用法 | 想扩充提示词、Skills、文档化工作流模板时 |
 
 ## 怎么用附录最值回票价
 
@@ -30,5 +31,6 @@ order: 99
 - 接 API 或上线前，先看 `E`
 - 判断项目边界时，去看 `F`
 - 想继续系统补课时，去看 `G`
+- 想对照社区整理的提示词与文档模板时，去看 `H`
 
 这样用，附录才真的会变成推进器，而不是额外负担。

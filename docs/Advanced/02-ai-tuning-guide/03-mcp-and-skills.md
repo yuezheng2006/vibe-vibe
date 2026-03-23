@@ -1134,5 +1134,7 @@ graph TB
 - 前置：2.2 VibeCoding 工作流
 - 详见：2.4 项目规则配置
 - 扩展：[MCP 官方仓库](https://github.com/modelcontextprotocol/servers)
-- 扩展：[插件官方文档](hhttps://github.com/anthropics/claude-plugins-official)
-- 扩展：[Agent Skills 官方文档](https://code.claude.com/docs/zh-CN/skills)
+- 扩展：[插件官方仓库](https://github.com/anthropics/claude-plugins-official)
+- 扩展（Agent Skills，Claude 文档站）：[概述](https://platform.claude.com/docs/zh-CN/agents-and-tools/agent-skills/overview) · [技能创作最佳实践](https://platform.claude.com/docs/zh-CN/agents-and-tools/agent-skills/best-practices) · [快速入门](https://platform.claude.com/docs/zh-CN/agents-and-tools/agent-skills/quickstart) · [API 使用 Skills](https://platform.claude.com/docs/zh-CN/build-with-claude/skills-guide)
+- 扩展（Claude Code 本地 Skills）：[Claude Code 文档 · Skills](https://code.claude.com/docs/zh-CN/skills)
+- 扩展（社区插件 · 代码库知识图谱）：[Understand Anything](https://github.com/Lum1104/Understand-Anything) — Claude Code 插件市场可装：多智能体扫描仓库、生成可搜索的知识图谱与可视化看板；亦支持 Codex、OpenCode、Cursor 等（见仓库 [README.zh-CN.md](https://github.com/Lum1104/Understand-Anything/blob/main/README.zh-CN.md)）

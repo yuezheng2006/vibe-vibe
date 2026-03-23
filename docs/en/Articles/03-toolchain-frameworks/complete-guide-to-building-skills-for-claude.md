@@ -2,7 +2,7 @@
 title: Complete Guide to Building Skills for Claude
 description: A comprehensive guide covering everything from basics to advanced techniques for building custom Claude Skills—including design patterns, testing methods, and distribution strategies.
 author: Anthropic
-source: https://docs.anthropic.com/en/docs/build-with-claude/skills
+source: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview
 date: '2026-01-15'
 category: 03-toolchain-frameworks
 tags:
@@ -17,7 +17,7 @@ tags:
 
 **Author: Anthropic**
 
-**Original: [Read the full article](https://docs.anthropic.com/en/docs/build-with-claude/skills)**
+**Official references: [Agent Skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) · [Authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices)**
 
 <div class="article-meta">
 </div>
@@ -293,10 +293,12 @@ Solution: Move detailed reference material to Level 3 (linked files). Keep the S
 
 ## Resources and References
 
-- **[Official Anthropic Skills Documentation](https://docs.anthropic.com/en/docs/build-with-claude/skills):** Authoritative source for technical specifications and requirements
+- **[Agent Skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview):** Product architecture and how skills load
+- **[Authoring best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices):** How to write skills Claude can discover and use reliably
+- **[Skills quickstart](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/quickstart):** First skill walkthrough
+- **[Skills in the Claude API](https://platform.claude.com/docs/en/build-with-claude/skills-guide):** API upload and usage
 - **[Skills.sh Directory](https://skills.sh/):** Community directory of reusable skills
 - **[AgentSkills.io](https://agentskills.io/):** Open standard for packaging agent knowledge
-- **[Skill Creator Tool](https://docs.anthropic.com/en/docs/build-with-claude/skills#skill-creator):** Interactive tool for building your first skill
 
 ### Quick Reference: Technical Requirements
 

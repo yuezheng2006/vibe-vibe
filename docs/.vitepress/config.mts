@@ -130,6 +130,13 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
             ]
           },
           {
+            text: 'Vibe Coding 指南',
+            items: [
+              { text: '本章说明', link: '/VibeCodingCN/' },
+              { text: 'README 全文（社区转载）', link: '/VibeCodingCN/02-readme-full' },
+            ]
+          },
+          {
             text: 'OpenClaw 教程',
             items: [
               { text: '序言', link: '/OpenClaw/' },
@@ -229,6 +236,13 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
               { text: 'Engineering Practices & Quality Assurance', link: '/en/Articles/04-engineering-practices/' },
               { text: 'Security, Compliance & Limitations', link: '/en/Articles/05-security-compliance/' },
               { text: 'Business Applications & Industry Trends', link: '/en/Articles/06-business-trends/' },
+            ]
+          },
+          {
+            text: 'Vibe Coding Guide',
+            items: [
+              { text: 'About this section', link: '/en/VibeCodingCN/' },
+              { text: 'Full README (Chinese)', link: '/VibeCodingCN/02-readme-full' },
             ]
           },
           {
@@ -889,7 +903,7 @@ Allow: /security.txt
           excludeFolders: ['en', 'zh', 'public', 'assets', '.vitepress', '.claude', 'deployment'],
 
         manualSortFileNameByPriority: [
-          'Basic', 'Advanced', 'Practice', 'OpenClaw', 'Articles', 'Basic-old',
+          'Basic', 'Advanced', 'Practice', 'OpenClaw', 'Articles', 'VibeCodingCN', 'Basic-old',
           'Basic/00-preface', 'Basic/01-awakening', 'Basic/02-mindset', 'Basic/03-technique',
           'Basic/04-practice-0-to-1', 'Basic/05-advanced', 'Basic/06-learning-paths',
           'Basic/99-appendix', 'Basic/100-epilogue', 'Basic/101-next-part',
@@ -922,7 +936,7 @@ Allow: /security.txt
         frontmatterOrderDefaultValue: 9999,
 
         manualSortFileNameByPriority: [
-          'Basic', 'Advanced', 'Practice', 'Articles',
+          'Basic', 'Advanced', 'Practice', 'Articles', 'VibeCodingCN',
           'Basic/00-preface', 'Basic/01-awakening', 'Basic/02-mindset', 'Basic/03-technique',
           'Basic/04-practice-0-to-1', 'Basic/05-advanced', 'Basic/06-learning-paths',
           'Basic/99-appendix', 'Basic/100-epilogue', 'Basic/101-next-part',

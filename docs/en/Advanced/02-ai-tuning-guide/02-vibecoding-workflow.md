@@ -16,11 +16,20 @@ chapter: "Chapter 2"
 
 > The "Workflow (tool flow)" mentioned in the preface is the core of Vibecoding, as well as the standard VibeCoding development process.
 
+::: tip Community “asset library” reading
+The Chinese community repo [**vibe-coding-cn**](https://github.com/2025Emma/vibe-coding-cn) organizes many prompts, Skills, and document layouts into browsable folders (layered prompts, memory-bank-style doc skeletons, etc.). It is meant to be **cherry-picked alongside** this book: the book walks a full-stack path; that repo emphasizes **reusable phrasing and templates**.
+
+- **Full README mirrored on this site**: [Vibe Coding Guide (community mirror)](/VibeCodingCN/) → [full README (Chinese)](/VibeCodingCN/02-readme-full) (MIT, attribution at top)
+- **How to use it**: [Appendix H: Community Vibe Coding Resources](/en/Basic/99-appendix/h-community-vibe-coding-resources)
+:::
+
 ## Prerequisites
 
 ::: tip What is Claude Code
 
 Claude Code is an AI command-line tool that can directly read project files, execute commands, automatically modify code, and complete tasks.
+
+**Official docs**: [Overview](https://code.claude.com/docs/en/overview) · [Quickstart](https://code.claude.com/docs/en/quickstart) · [Common workflows](https://code.claude.com/docs/en/common-workflows) — or switch to **`/docs/zh-CN/...`** for Chinese.
 :::
 
 ::: tip What is a Workflow

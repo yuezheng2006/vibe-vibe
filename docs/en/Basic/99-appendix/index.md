@@ -18,6 +18,7 @@ The appendix is neither a prep assignment nor a second book for you to read cove
 | [E. API Keys, Environment Variables, and Basic Security](./e-api-key-env-security.md) | `.env`, `.gitignore`, and pre-launch checks | When connecting APIs or preparing to launch |
 | [F. What Vibe Coding Can and Cannot Do](./f-vibe-coding-can-and-cannot.md) | Capability boundaries, suitable scenarios, and unsuitable scenarios | When you want to judge whether a project should be done this way |
 | [G. Advanced Jump Map](./g-advanced-jump-map.md) | Advanced entry points corresponding to each boundary in the basic version | When you want to go deeper into a specific area |
+| [H. Community Vibe Coding Resources](./h-community-vibe-coding-resources.md) | Supplemental reading keyed to repos such as vibe-coding-cn | When you want more prompt, Skill, and document-workflow templates |
 
 ## How to Get the Most Value from the Appendix
 
@@ -30,5 +31,6 @@ If you are already moving your project forward in the main text, the most recomm
 - Before connecting APIs or launching, read `E` first
 - When judging project boundaries, go to `F`
 - If you want a more systematic deeper dive, go to `G`
+- If you want community prompt libraries and document templates for comparison, go to `H`
 
 Used this way, the appendix truly becomes an accelerator rather than an extra burden.

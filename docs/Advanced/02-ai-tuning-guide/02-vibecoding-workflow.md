@@ -16,11 +16,20 @@ chapter: "第二章"
 
 > 序言中提到的"Workflow（工具流）"是 Vibecoding 的核心，以及 VibeCoding 的标准开发流程。
 
+::: tip 社区里的「资产化」补充阅读
+中文社区仓库 [**vibe-coding-cn**](https://github.com/2025Emma/vibe-coding-cn) 把大量提示词、Skills 与文档结构整理成可检索的目录（例如分层 prompts、memory-bank 式文档骨架），适合在**本书主线之外**按需拷贝改造。它与本书互补：本书按全栈实战带你走通；对方侧重**可复用话术与模板**。
+
+- **站内全文转载**：[Vibe Coding 指南（社区原文）](/VibeCodingCN/) → [README 全文](/VibeCodingCN/02-readme-full)（MIT，文首有版权声明）
+- **用法说明**：[附录 H：社区 Vibe Coding 资源](/Basic/99-appendix/h-community-vibe-coding-resources)
+:::
+
 ## 前置知识
 
 ::: tip 什么是 Claude Code
 
 Claude Code 是一个 AI 命令行工具，能直接读取项目文件、执行命令、自动修改代码和完成任务。
+
+**官方中文文档**（安装、工作流、MCP、Skills 等）：[概述](https://code.claude.com/docs/zh-CN/overview) · [快速入门](https://code.claude.com/docs/zh-CN/quickstart) · [常见工作流](https://code.claude.com/docs/zh-CN/common-workflows)
 :::
 
 ::: tip 什么是 工作流

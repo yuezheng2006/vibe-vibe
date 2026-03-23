@@ -238,7 +238,7 @@ git -v
 npm uninstall -g @anthropic-ai/claude-code
 ```
 
-【此步骤在 Windows PowerShell】安装官方原版包，详细查阅 [Claude Code 官方文档](https://code.claude.com/docs/en/quickstart)
+【此步骤在 Windows PowerShell】安装官方原版包，详细查阅 [Claude Code 官方文档（中文快速入门）](https://code.claude.com/docs/zh-CN/quickstart)
 
 ```bash
 # 全局安装 Claude Code
