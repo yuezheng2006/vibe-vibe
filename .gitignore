@@ -62,3 +62,9 @@ demos/*/node_modules/
 # ============================================
 **/AGENTS.md
 **/CLAUDE.md
+/.agents/
+/.vercel/
+/config/
+/skills/
+/skills-lock.json
+/docs/questions/
