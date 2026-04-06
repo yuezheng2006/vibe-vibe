@@ -151,6 +151,26 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
             ]
           },
           {
+            text: 'Claude How To',
+            items: [
+              { text: 'README', link: '/claude-howto/README' },
+              { text: '目录索引', link: '/claude-howto/INDEX' },
+              { text: '功能目录', link: '/claude-howto/CATALOG' },
+              { text: '学习路线图', link: '/claude-howto/LEARNING-ROADMAP' },
+              { text: '概念指南', link: '/claude-howto/claude_concepts_guide' },
+              { text: '01. Slash Commands', link: '/claude-howto/01-slash-commands/' },
+              { text: '02. Memory', link: '/claude-howto/02-memory/' },
+              { text: '03. Skills', link: '/claude-howto/03-skills/' },
+              { text: '04. Subagents', link: '/claude-howto/04-subagents/' },
+              { text: '05. MCP', link: '/claude-howto/05-mcp/' },
+              { text: '06. Hooks', link: '/claude-howto/06-hooks/' },
+              { text: '07. Plugins', link: '/claude-howto/07-plugins/' },
+              { text: '08. Checkpoints', link: '/claude-howto/08-checkpoints/' },
+              { text: '09. Advanced Features', link: '/claude-howto/09-advanced-features/' },
+              { text: '10. CLI', link: '/claude-howto/10-cli/' },
+            ]
+          },
+          {
             text: '实践案例篇',
             link: '/Practice/'
           },
@@ -243,6 +263,26 @@ export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
             items: [
               { text: 'About this section', link: '/en/VibeCodingCN/' },
               { text: 'Full README (Chinese)', link: '/VibeCodingCN/02-readme-full' },
+            ]
+          },
+          {
+            text: 'Claude How To',
+            items: [
+              { text: 'README', link: '/claude-howto/README' },
+              { text: 'Index', link: '/claude-howto/INDEX' },
+              { text: 'Catalog', link: '/claude-howto/CATALOG' },
+              { text: 'Learning Roadmap', link: '/claude-howto/LEARNING-ROADMAP' },
+              { text: 'Concepts Guide', link: '/claude-howto/claude_concepts_guide' },
+              { text: '01. Slash Commands', link: '/claude-howto/01-slash-commands/' },
+              { text: '02. Memory', link: '/claude-howto/02-memory/' },
+              { text: '03. Skills', link: '/claude-howto/03-skills/' },
+              { text: '04. Subagents', link: '/claude-howto/04-subagents/' },
+              { text: '05. MCP', link: '/claude-howto/05-mcp/' },
+              { text: '06. Hooks', link: '/claude-howto/06-hooks/' },
+              { text: '07. Plugins', link: '/claude-howto/07-plugins/' },
+              { text: '08. Checkpoints', link: '/claude-howto/08-checkpoints/' },
+              { text: '09. Advanced Features', link: '/claude-howto/09-advanced-features/' },
+              { text: '10. CLI', link: '/claude-howto/10-cli/' },
             ]
           },
           {
