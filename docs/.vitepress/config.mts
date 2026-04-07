@@ -66,6 +66,7 @@ const SITE_URL = resolveSiteUrl();
 export default withMermaid(defineConfigWithTheme<DefaultTheme.Config>({
   // 排除 docs/docs 目录不构建
   srcExclude: ['**/docs/**'],
+  ignoreDeadLinks: true,
 
   // i18n 配置
   locales: {

@@ -1,8 +1,3 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="logos/claude-howto-logo-dark.svg">
-  <img alt="Claude How To" src="logos/claude-howto-logo.svg">
-</picture>
-
 # Claude How To - Brand Assets
 
 Complete collection of logos, icons, and favicons for the Claude How To project. All assets use the V3.0 design: a compass with code bracket (`>`) symbol, representing guided navigation through code — using a Black/White/Gray palette with Bright Green (#22C55E) accent.
